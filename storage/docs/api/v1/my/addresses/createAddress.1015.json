@@ -1,0 +1,9 @@
+{
+    "code": 1015,
+    "message": "The given data was invalid.",
+    "errors": {
+        "district": [
+            "The selected district field is invalid."
+        ]
+    }
+}

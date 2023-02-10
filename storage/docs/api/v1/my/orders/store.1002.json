@@ -1,0 +1,9 @@
+{
+    "code": 1002,
+    "message": "The given data was invalid.",
+    "errors": {
+        "products.0.id": [
+            "The selected products.0.id is invalid."
+        ]
+    }
+}

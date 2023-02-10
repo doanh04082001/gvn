@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "id": "063d5f92-584e-4b36-bc42-7f63a359842b",
+            "category_id": "ba2f9124-8f97-4bf7-a745-995187c14c4e",
+            "promotion_id": "3a3b0c6b-6aa8-4f92-8b34-4bd3fd1718a2",
+            "name": "Combo 2 miếng gà Shilin Yaki size M + 2 Trà đào",
+            "description": "1 cơm đùi gà cay sốt Thái,  1 trà trà đào, 1 khoai tây lắc",
+            "status": 1,
+            "sold": 2884,
+            "slug": "combo-2-mieng-ga-shilin-yaki-size-m-2-tra-dao-1",
+            "image": "http://<domain>/storage/products/rNgfWVkEeUaQdOhgTRlaCW12jge2xS7FIqav6LtU.jpg",
+            "rating_count": 14,
+            "rating": 4.3,
+            "price": 136000,
+            "sale_price": 126000,
+            "promotion_price": 126000,
+            "cost": 116000,
+            "created_at": "2021-07-06 08:14:55"
+        }
+    ],
+    "links": {
+        "first": "http://<domain>/api/v1/stores/000b1e21-37c5-4554-9ff6-6f249834569a/products?items_per_page=1&keyword=ga&category_id=ba2f9124-8f97-4bf7-a745-995187c14c4e&promotion_id=3a3b0c6b-6aa8-4f92-8b34-4bd3fd1718a2&page=1",
+        "last": "http://<domain>/api/v1/stores/000b1e21-37c5-4554-9ff6-6f249834569a/products?items_per_page=1&keyword=ga&category_id=ba2f9124-8f97-4bf7-a745-995187c14c4e&promotion_id=3a3b0c6b-6aa8-4f92-8b34-4bd3fd1718a2&page=2",
+        "prev": "http://<domain>/api/v1/stores/000b1e21-37c5-4554-9ff6-6f249834569a/products?items_per_page=1&keyword=ga&category_id=ba2f9124-8f97-4bf7-a745-995187c14c4e&promotion_id=3a3b0c6b-6aa8-4f92-8b34-4bd3fd1718a2&page=1",
+        "next": null
+    },
+    "meta": {
+        "current_page": 2,
+        "from": 2,
+        "last_page": 2,
+        "path": "http://<domain>/api/v1/stores/000b1e21-37c5-4554-9ff6-6f249834569a/products",
+        "per_page": "1",
+        "to": 2,
+        "total": 2
+    },
+    "code": 2000,
+    "message": "success"
+}

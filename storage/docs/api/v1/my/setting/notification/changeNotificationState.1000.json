@@ -1,0 +1,9 @@
+{
+    "code": 1000,
+    "message": "The given data was invalid.",
+    "errors": {
+        "notification_state": [
+            "The notification state field is required."
+        ]
+    }
+}

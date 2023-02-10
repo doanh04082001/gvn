@@ -1,0 +1,451 @@
+@import "../custom-radio";
+@import "../components/modal-footer";
+@import "../search-input";
+@import "../components/voucher-item";
+
+.shopping-cart {
+    line-height: 16px;
+
+    @include responsive(MD) {
+        margin-top: 1rem;
+    }
+
+    .cart-left {
+        padding-right: 15px;
+
+        @include responsive(MD) {
+            padding-left: 15px;
+        }
+
+        .store-order-info {
+            padding: 12px 16px;
+            margin-bottom: 10px;
+            background: $bg-store-info;
+            border: 1px solid $light-blue;
+            font-size: 12px;
+            color: $text-secondary-main;
+            border-radius: 2px;
+
+            .store-name {
+                font-size: 14px;
+                color: $text-primary-main;
+            }
+        }
+    }
+
+    .cart-right {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .cart-product {
+        border: 1px solid $border-primary-main;
+        color: $text-primary-main;
+        padding: 21px;
+        margin-bottom: 25px;
+
+        .product-item {
+            padding-top: 15px;
+            padding-bottom: 0;
+            border-top: 1px solid $border-primary-main;
+            margin-top: 15px;
+
+            @include responsive(MD) {
+                .price-block {
+                    padding-bottom: 0;
+                }
+            }
+
+            &:first-child {
+                padding-top: 0;
+                border-top: none;
+
+                @include responsiveMinWidth(XL) {
+                    .custom-position-price {
+                        align-items: center;
+
+                        .price-block {
+                            top: initial;
+                        }
+                    }
+                }
+
+                .price-block {
+                    top: 0;
+                }
+
+                @include responsive(MD) {
+                    .price-block {
+                        top: initial;
+                    }
+                }
+            }
+        }
+    }
+
+    .total-quantity {
+        font-size: 15px;
+        line-height: 15px;
+        margin-bottom: 21px;
+        font-weight: 600;
+    }
+
+    .border-radius-2 {
+        border-radius: 2px;
+    }
+
+    .block-padding-margin {
+        padding: 16px 21px;
+        margin-bottom: 12px;
+        border: 1px solid $border-primary-main;
+    }
+
+    .title-color {
+        color: $text-primary-dark;
+    }
+
+    .title-size {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .address {
+        font-size: 14px;
+    }
+
+    ::placeholder {
+        color: $gray-51;
+        font-size: 12px;
+    }
+
+    .delivery-time-label, .delivery-time {
+        font-size: 14px;
+    }
+
+    .delivery-block {
+        .shipping-icon {
+            display: inline-block;
+            background: url(/assets/images/icons/shipping-icon.png) no-repeat center/cover;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            float: left;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .store-icon {
+            display: inline-block;
+            background: url(/assets/images/icons/store-icon.png) no-repeat center/cover;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            float: left;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .radio-group:nth-child(2) {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+    }
+
+    .delivery-address {
+        .address {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            color: $text-primary-main;
+        }
+
+        .address-input {
+            margin-bottom: 16px;
+        }
+
+        .delivery-time-label {
+            color: $orange;
+        }
+
+        .delivery-time {
+            color: $text-primary-main;
+        }
+
+        .show-delivery-address-modal {
+            font-size: 13px;
+            color: $link-main;
+        }
+    }
+
+    .voucher {
+        position: relative;
+
+        .shilin-proto {
+            color: $link-light;
+        }
+
+        .voucher-name {
+            font-size: 14px;
+            color: $text-primary-main;
+        }
+
+        .voucher-btn {
+            position: relative;
+            padding-right: 28px;
+        }
+
+        .shilin-top {
+            position: absolute;
+            right: 13px;
+            font-size: 12px;
+        }
+
+        .delete-voucher-btn {
+            position: absolute;
+            font-size: 16px;
+            right: 22px;
+            border: none;
+            background: none;
+        }
+
+        .title {
+            margin-bottom: 8px;
+        }
+
+        .fee {
+            font-size: 14px;
+            line-height: 26px;
+            margin-bottom: 5px;
+
+            &:nth-child(4) {
+                margin-bottom: 14px;
+            }
+
+            span:first-child {
+                color: $text-secondary-main;
+            }
+
+            span:last-child {
+                color: $text-primary-dark;
+            }
+        }
+
+        .sum-fee {
+            color: $text-primary-dark;
+            font-size: 15px;
+            padding-top: 16px;
+            border-top: 1px solid $border-primary-main;
+            font-weight: 600;
+        }
+    }
+
+    .payment {
+        .payment-btn {
+            position: relative;
+            border: none;
+            padding: 0;
+        }
+
+        .shilin-money {
+            font-size: 20px;
+            margin-top: -2px;
+        }
+
+        .shilin-top {
+            position: absolute;
+            right: 13px;
+            font-size: 12px;
+        }
+
+        .payment-name {
+            font-size: 14px;
+            color: $text-primary-main;
+            position: absolute;
+            right: 35px;
+
+            .payment-icon {
+                width: 24px;
+                height: 24px;
+                margin-top: -2px;
+                margin-right: 3px;
+            }
+        }
+    }
+
+    .header-title {
+        font-size: 19px;
+        font-weight: 600;
+        color: $text-primary-dark;
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    .modal-footer {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
+    }
+
+    #delivery-address-modal {
+        ::placeholder {
+            color: $gray-51;
+            font-size: 14px;
+        }
+
+        .modal-content {
+            .modal-body {
+                padding: 20px 30px;
+
+                .shilin-search {
+                    font-size: 20px;
+                    padding-top: 10px;
+                }
+
+                .saved-address-title {
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: $text-primary-dark;
+                    margin-bottom: 20px;
+                }
+
+                .radio-group-wrap {
+                    .radio-group {
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid $border-primary-main;
+
+                        &:first-child {
+                            padding-top: 0;
+                        }
+
+                        &:last-child {
+                            padding-bottom: 0;
+                            border-bottom: none;
+                        }
+
+                        label:before {
+                            margin-right: 20px;
+                        }
+
+                        .main-address {
+                            font-size: 14px;
+                            font-weight: 600;
+                            margin-left: 15px;
+                        }
+
+                        .detail-address {
+                            font-size: 12px;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+
+            .btn-add-address {
+                color: $link-dark;
+                border-color: $link-dark;
+                height: 45px;
+                border-radius: 3px;
+                font-size: 14px;
+                margin-bottom: 25px;
+
+                &:hover {
+                    background: $link-dark;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    #add-address-modal {
+        .modal-content {
+            .header-title {
+                font-size: 19px;
+                font-weight: 600;
+                color: $text-primary-dark;
+            }
+
+            .modal-body {
+                padding: 20px 30px;
+
+                .form-label {
+                    font-size: 14px;
+                    color: $text-primary-dark;
+                }
+
+                input, select {
+                    border: none;
+                    border-radius: 0;
+                    border-bottom: 1px solid $border-primary-main;
+                    font-size: 14px;
+                    color: $text-primary-dark;
+                }
+
+                select.custom {
+                    background-image: linear-gradient(45deg, transparent 50%, $text-primary-dark 50%),
+                    linear-gradient(135deg, $text-primary-dark 50%, transparent 50%);
+                    background-position: calc(100% - 20px) calc(1em + 2px),
+                    calc(100% - 15px) calc(1em + 2px);
+                    background-size: 6px 4px, 6px 4px;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .footer-block {
+                padding-top: 0;
+                border-top: none;
+            }
+        }
+    }
+
+    #add-voucher-modal {
+        .modal-body {
+            padding: 5px 30px;
+
+            .footer-modal {
+                padding-top: 0;
+                border-top: none;
+            }
+        }
+    }
+
+    #add-payment-modal {
+        .modal-body {
+            padding: 25px 30px;
+
+            .payment-label {
+                border-bottom: 1px solid $border-primary-main;
+                line-height: 45px;
+
+                &.last-label {
+                    border-bottom: none;
+                }
+
+                .payment-icon {
+                    width: 24px;
+                    height: 24px;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        .footer-block {
+            padding-top: 0;
+            border-top: none;
+        }
+    }
+
+    .btn-order {
+        font-size: 14px;
+        color: $white;
+        background: $orange;
+        border-radius: 26px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        margin-bottom: 30px;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,94 @@
+@import "../variables";
+
+.top-area {
+    position: relative;
+    display: block;
+
+    .border-bt {
+        border-bottom: 1px solid $border-primary-main;
+    }
+
+    .header-top-area {
+        z-index: 999;
+        background: $text-secondary-light;
+
+        .top-bar {
+            .top-message {
+                display: flex;
+                align-items: center;
+                letter-spacing: 0;
+                color: $text-secondary-light;
+                text-transform: uppercase;
+                justify-content: center;
+                min-height: 39px;
+            }
+
+            .call-action a {
+                display: flex;
+                align-items: center;
+                color: $text-secondary-light !important;
+                justify-content: center;
+                min-height: 39px;
+            }
+
+            background: $bg-secondary-dark-top 0% 0% no-repeat padding-box;
+            min-height: 39px;
+        }
+
+        .header-mid {
+            .header-profile-icon {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    list-style: none;
+                    float: right;
+                    padding-left: 15px;
+                    font-size: 15px;
+                    color: $text-secondary-dark;
+                }
+                width: 100%;
+            }
+
+            margin-top: 20px;
+        }
+
+        .navbar-nav {
+            li.active a {
+                font-weight: bold !important;
+                color: $text-primary-dark;
+            }
+
+            li a {
+                color: $text-secondary-dark;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .px-right-0 {
+        padding-right: 0;
+    }
+
+    .mobile-icon a {
+        color: $text-primary-dark;
+    }
+
+    .store-name-mobile {
+        display: flex;
+        align-items: center;
+
+        div {
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+
+    .show-login-modal {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "data": [
+        {
+            "id": "2f818793-c5c5-4024-ab29-579fbb552d41",
+            "name": "Shilin: Gà rán đài loan, cơm văn phòng Q10",
+            "address": "268 Tô Hiến Thành, Phường 15, Quận 10, Thành phố Hồ Chí Minh",
+            "latitude": 10.779168762007,
+            "longitude": 106.66508896864
+        }
+    ],
+    "code": 2000,
+    "message": "success"
+}

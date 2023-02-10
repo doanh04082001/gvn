@@ -1,0 +1,13 @@
+{
+    "data": {
+        "id": "016d0fb5-c593-4313-a83b-9237ef205f0b",
+        "name": "abcdef",
+        "email": "aaccccc@gmail.com",
+        "avatar": "http://<domain>/storage/products/fYtDlwvr50sOwl4Kili4aF8qYEOsPvLOQtUCAhFI.png",
+        "phone": "562.486.4804",
+        "birthday": "2002-12-11",
+        "gender": 0
+    },
+    "code": 2000,
+    "message": "success"
+}

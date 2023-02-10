@@ -1,0 +1,13 @@
+.breadcrumbs {
+    margin-left: 15px;
+    margin-bottom: 30px;
+
+    a {
+        font-size: 14px !important;
+        color: #222222 !important ;
+    }
+
+    .active-custom a {
+        font-weight: bold !important;
+    }
+}

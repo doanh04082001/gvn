@@ -1,0 +1,49 @@
+.rating-group {
+    display: inline-block;
+    input {
+        display: none;
+
+        &:checked {
+            ~ label {
+                i {
+                    color: $bg-secondary-main;
+                }
+            }
+        }
+
+        &:hover {
+            ~ label {
+                i {
+                    color: $bg-secondary-main !important;
+                }
+            }
+        }
+    }
+
+    label {
+        cursor: pointer;
+        padding: 0 .1em;
+        font-size: 2rem;
+
+        i {
+            color: $bg-primary-light;
+            pointer-events: none;
+        }
+
+        @include responsive(MD) {
+            font-size: 1.2rem;
+        }
+
+        @include responsive(SM) {
+            font-size: 2rem;
+        }
+    }
+
+    &:hover {
+        > label {
+            i {
+                color: $bg-primary-light !important;
+            }
+        }
+    }
+}

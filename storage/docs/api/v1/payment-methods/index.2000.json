@@ -1,0 +1,12 @@
+{
+    "code": 2000,
+    "message": "success",
+    "data": [
+        {
+            "id": "507f6beb-bda9-4a24-9fff-48e14ab36679",
+            "code": "cash",
+            "name": "Tiền Mặt",
+            "icon": "http://<domain>/assets/images/payment-cash.png"
+        }
+    ]
+}

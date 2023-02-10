@@ -1,0 +1,39 @@
+{
+    "vi": {
+        "default": "Có một thông báo mới.",
+        "orders": {
+            "new_order": {
+                "title": "Có một đơn hàng mới.",
+                "body": "Mã đơn hàng: :code"
+            },
+            "cancel_order": {
+                "title": "Đơn hàng đã bị huỷ.",
+                "body": "Mã đơn hàng: :code \nCửa hàng: :store_name"
+            },
+            "update_status": {
+                "title": "Cập nhật trạng thái đơn hàng.",
+                "body": "Mã đơn hàng: :code \nTrạng thái: :status"
+            },
+            "status_options": {
+                "0": "Hủy",
+                "1": "Chờ xử lý",
+                "2": "Đang xử lý",
+                "3": "Đang giao",
+                "4": "Hoàn thành"
+            },
+            "status": {
+                "done": 4
+            }
+        },
+        "shipping": {
+            "accepted": {
+                "title": "Tài xế đã nhận đơn hàng.",
+                "body": "Mã đơn hàng: :code"
+            },
+            "cancel": {
+                "title": "Tài xế đã hủy đơn hàng.",
+                "body": "Mã đơn hàng: :code \nCửa hàng: :store_name"
+            }
+        }
+    }
+}

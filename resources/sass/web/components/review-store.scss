@@ -1,0 +1,23 @@
+.store-rating {
+    img {
+        width: 5em;
+    }
+}
+
+.review-content {
+    height: 2.8125em;
+    border-radius: 0.1875em;
+}
+
+.review-tag {
+    color: $text-secondary-main;
+    background: #F5F7FA 0 0 no-repeat padding-box;
+}
+
+.btn-submit {
+    width: 8.0625em;
+}
+
+.btn-cancel {
+    width: 6.875em;
+}

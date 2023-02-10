@@ -1,0 +1,91 @@
+.a-none {
+    transition: all 0.5s;
+    color: inherit;
+
+    &:hover {
+        background-color: #ebedf0;
+        color: inherit;
+    }
+}
+
+.text-light-primary {
+    color: #2e83f3;
+}
+
+.text-dark-primary {
+    color: #1876f2;
+}
+
+.opacity-75 {
+    opacity: .75;
+}
+
+.max-height-90 {
+    max-height: 90vh;
+}
+
+.notification-dropdown-container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.notification-dropdown-container::-webkit-scrollbar {
+    width: .5vw;
+
+    @include responsive(XS) {
+        width: 1vw;
+        height: 5px;
+    }
+}
+
+.notification-dropdown-container::-webkit-scrollbar-track {
+    background-color: inherit;
+}
+
+.notification-dropdown-container::-webkit-scrollbar-track:hover {
+    background-color: #f0f1f2;
+}
+
+.notification-dropdown-container::-webkit-scrollbar-thumb {
+    background: #d0d0d0;
+    border-radius: 2vw;
+}
+
+.notification-dropdown-container::-webkit-scrollbar-thumb:hover {
+    background: #c9c9c9;
+}
+
+.bg-loading {
+    animation: background-loading 1s ease-in infinite alternate;
+}
+
+.loading-icon {
+    width: 100%;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.loading-message {
+    width: 100%;
+    height: 10px;
+    border-radius: 20px;
+}
+
+@keyframes background-loading {
+    from {background-color: #f0f0f0;}
+    to {background-color: #d2d2d2;}
+}
+
+.notification-icon-container {
+    font-size: 2rem;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.read-all {
+    cursor: pointer;
+
+    &:hover {
+        color: #1876f2;
+    }
+}

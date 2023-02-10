@@ -1,0 +1,20 @@
+.product-item-review {
+    .product-item-image {
+        width: 100%;
+    }
+
+    .product-description {
+        letter-spacing: 0;
+        color: $text-secondary-main;
+    }
+
+    .product-title {
+        letter-spacing: -0.39px;
+        color: $text-primary-main;
+    }
+
+    padding: 0.6em;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+

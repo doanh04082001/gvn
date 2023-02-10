@@ -1,0 +1,9 @@
+{
+    "code": 1008,
+    "message": "The given data was invalid.",
+    "errors": {
+        "voucher": [
+            "The selected voucher is invalid."
+        ]
+    }
+}

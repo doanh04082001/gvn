@@ -1,0 +1,202 @@
+.contact-layout {
+    box-sizing: border-box;
+    padding: 0 150px;
+
+    .iframe-container {
+        position: relative;
+        width: 100%;
+        min-height: calc(100vw / 5);
+        margin-bottom: 1.5rem;
+
+        @include responsive(MD) {
+            min-height: calc(100vw / 3);
+        }
+        @include responsive(XS) {
+            min-height: calc(100vw / 2);
+        }
+    }
+
+    .responsive-iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+    .info {
+        color: $text-primary-main !important;
+        text-align: left;
+
+        .text-info {
+            color: $text-primary-main !important;
+
+            @include responsive(SM) {
+                font-size: 12px;
+                line-height: 1;
+            }
+        }
+    }
+
+    .input-form {
+        .infor-client-input {
+            .info-input {
+                input {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .form-group {
+        label {
+            color: $text-secondary-main;
+        }
+
+        span.error {
+            display: inline-block;
+            color: $red;
+            margin-top: .25rem;
+        }
+    }
+
+    @include responsive(MD) {
+        padding: 0 50px;
+    }
+
+    @include responsive(SM) {
+        padding: 0;
+    }
+}
+
+.centerY {
+    display: flex;
+    align-items: center;
+}
+
+.centerX {
+    display: flex;
+    justify-content: center;
+}
+
+.centerXY {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shilin-info {
+    margin: 12px 0;
+    height: 36px;
+}
+
+.circle-eclipse .icon {
+    padding: 10px;
+    border-radius: 50%;
+    background: #f3b43e 0% 0% no-repeat padding-box;
+    color: $white;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 1rem;
+
+    @include responsive(XS) {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+.shilin-mail.icon {
+	font-size: 36px;
+    padding: 0;
+ 	background-color: white;
+	color: #F3B43E;
+    @include responsive(SM) {
+        font-size: 26px;
+    }
+}
+
+.shilin-info {
+    margin-bottom: 25px;
+}
+
+.shilin-info.input {
+    height: 45px;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.field-commnent {
+    height: 120px;
+    border: 1px solid #dce1e8;
+    border-radius: 3px;
+    opacity: 1;
+    margin-bottom: 25px;
+}
+
+textarea {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+    text-align: left;
+    font: normal normal normal 14px/16px SF Pro Text;
+    letter-spacing: 0px;
+    color: #868686;
+}
+
+.sent {
+    color: #ffffff;
+}
+
+.clear {
+    clear: both;
+}
+
+.submit-form-button {
+    width: 100%;
+    max-width: 304px;
+    height: 40px;
+    background: $bg-primary-main 0% 0% no-repeat padding-box;
+    color: $white;
+    border-radius: 26px;
+    opacity: 1;
+
+    &:hover {
+        background: #eea723;
+        color: $white;
+    }
+}
+
+.mail-promotion {
+    height: 106px;
+    background: #80ff00 0% 0% no-repeat padding-box;
+    opacity: 0.5;
+}
+
+.mail-promotion_child {
+    width: 1208px;
+    height: 100%;
+    margin: auto;
+    background: #ffff80 0% 0% no-repeat padding-box;
+}
+
+.email-pic img {
+    margin: 20px 0 0;
+    width: 64px;
+    height: 64px;
+}
+
+.myframe {
+    height: 250px;
+}
+
+.recaptcha-require {
+    width: 100%;
+}
+
+.alert-error {
+    color: red;
+    font-size: 17px;
+    font-weight: bold;
+    border-color: red;
+    border: 2px;
+    text-align: center;
+}

@@ -1,0 +1,45 @@
+{
+    "data": {
+        "id": "a7e20213-dc48-458c-bc83-c6c641e6549d",
+        "category_id": "f8d5d626-c598-462a-8b02-5bd374e69213",
+        "promotion_id": "a900bef2-09f3-4ed1-bb8a-ed60574ba603",
+        "name": "Trà Đào Dằm + Hạt Thủy Tinh",
+        "description": "1 cơm đùi gà cay sốt Thái,  1 trà trà đào, 1 khoai tây lắc",
+        "status": 1,
+        "sold": 1328,
+        "slug": "tra-dao-dam-hat-thuy-tinh",
+        "image": "http://<domain>/storage/products/8kOgK8BvYZtozXoLQflmRL9DlQ5PrjuyTpciRXeB.jpg",
+        "rating_count": 8,
+        "rating": 4.6,
+        "price": 30000,
+        "sale_price": 20000,
+        "promotion_price": 20000,
+        "cost": 10000,
+        "created_at": "2021-07-08 10:10:16",
+        "variants": [
+            {
+                "id": "1416c2af-c6f6-4387-9ef9-e882414b8606",
+                "name": "size M",
+                "description": null,
+                "status": 1,
+                "price": 30000,
+                "sale_price": 20000,
+                "promotion_price": 15000,
+                "cost": 10000
+            }
+        ],
+        "toppings": [
+            {
+                "id": "3ea10abe-e658-4f14-a024-43abcd1da020",
+                "name": "Salad Sốt Mè",
+                "description": "Thêm khẩu vị cùng topping",
+                "status": 1,
+                "price": 30000,
+                "sale_price": 20000,
+                "cost": 15000
+            }
+        ]
+    },
+    "code": 2000,
+    "message": "success"
+}

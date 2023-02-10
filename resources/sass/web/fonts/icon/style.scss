@@ -1,0 +1,186 @@
+@font-face {
+  font-family: 'Shilin';
+  src:  url('./fonts/icon/fonts/Shilin.eot?7v1fau');
+  src:  url('./fonts/icon/fonts/Shilin.eot?7v1fau#iefix') format('embedded-opentype'),
+    url('./fonts/icon/fonts/Shilin.ttf?7v1fau') format('truetype'),
+    url('./fonts/icon/fonts/Shilin.woff?7v1fau') format('woff'),
+    url('./fonts/icon/fonts/Shilin.svg?7v1fau#Shilin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="shilin-"], [class*=" shilin-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Shilin' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.shilin-infor-bell:before {
+  content: "\e930";
+}
+.shilin-infor-chat:before {
+  content: "\e931";
+}
+.shilin-infor-order:before {
+  content: "\e932";
+}
+.shilin-infor-promotion:before {
+  content: "\e933";
+}
+.shilin-information:before {
+  content: "\e934";
+}
+.shilin-cancel-product:before {
+  content: "\e92f";
+}
+.shilin-check-square-full:before {
+  content: "\e92c";
+}
+.shilin-cancel-full:before {
+  content: "\e929";
+}
+.shilin-check-circle-full:before {
+  content: "\e92a";
+}
+.shilin-check-circle:before {
+  content: "\e92b";
+}
+.shilin-check-square:before {
+  content: "\e92d";
+}
+.shilin-login-facebook:before {
+  content: "\e925";
+}
+.shilin-login-google:before {
+  content: "\e926";
+}
+.shilin-login-password:before {
+  content: "\e927";
+}
+.shilin-login-phone:before {
+  content: "\e928";
+}
+.shilin-setting-notification:before {
+  content: "\e92e";
+}
+.shilin-add-image:before {
+  content: "\e900";
+}
+.shilin-add:before {
+  content: "\e901";
+}
+.shilin-bell:before {
+  content: "\e902";
+}
+.shilin-block:before {
+  content: "\e903";
+}
+.shilin-bottom:before {
+  content: "\e904";
+}
+.shilin-calendar:before {
+  content: "\e905";
+}
+.shilin-cancle:before {
+  content: "\e906";
+}
+.shilin-card:before {
+  content: "\e907";
+}
+.shilin-cart:before {
+  content: "\e908";
+}
+.shilin-check:before {
+  content: "\e909";
+}
+.shilin-chicken:before {
+  content: "\e90a";
+}
+.shilin-circle:before {
+  content: "\e90b";
+}
+.shilin-down:before {
+  content: "\e90c";
+}
+.shilin-hamburger:before {
+  content: "\e90d";
+}
+.shilin-heart:before {
+  content: "\e90e";
+}
+.shilin-juice:before {
+  content: "\e90f";
+}
+.shilin-local:before {
+  content: "\e910";
+}
+.shilin-location:before {
+  content: "\e911";
+}
+.shilin-mail:before {
+  content: "\e912";
+}
+.shilin-menu:before {
+  content: "\e913";
+}
+.shilin-messeage:before {
+  content: "\e914";
+}
+.shilin-minus:before {
+  content: "\e915";
+}
+.shilin-money:before {
+  content: "\e916";
+}
+.shilin-note:before {
+  content: "\e917";
+}
+.shilin-phone:before {
+  content: "\e918";
+}
+.shilin-potato:before {
+  content: "\e919";
+}
+.shilin-promotion:before {
+  content: "\e91a";
+}
+.shilin-proto:before {
+  content: "\e91b";
+}
+.shilin-protom:before {
+  content: "\e91c";
+}
+.shilin-search:before {
+  content: "\e91d";
+}
+.shilin-send:before {
+  content: "\e91e";
+}
+.shilin-star:before {
+  content: "\e91f";
+}
+.shilin-telephone:before {
+  content: "\e920";
+}
+.shilin-time:before {
+  content: "\e921";
+}
+.shilin-top:before {
+  content: "\e922";
+}
+.shilin-user-full:before {
+  content: "\e923";
+}
+.shilin-user:before {
+  content: "\e924";
+}

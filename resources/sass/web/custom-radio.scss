@@ -1,0 +1,90 @@
+.custom-radio {
+    &:checked {
+        position: absolute;
+        left: -9999px;
+
+        + {
+            label {
+                position: relative;
+                padding-left: 28px;
+                cursor: pointer;
+                line-height: 32px;
+                font-size: 14px;
+                display: inline-block;
+                color: $text-primary-main;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 100%;
+                    background: $white;
+                    transform: translate(0, -50%);
+                    left: 0;
+                    top: 50%;
+                }
+
+                &:after {
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    background: url(/assets/images/icons/radio-checked.png) no-repeat center/cover;
+                    position: absolute;
+                    border-radius: 100%;
+                    -webkit-transition: all 0.2s ease;
+                    transition: all 0.2s ease;
+                    opacity: 1;
+                    transform: translate(0, -50%);
+                    left: 0;
+                    top: 50%;
+                }
+            }
+        }
+    }
+
+    &:not(:checked) {
+        position: absolute;
+        left: -9999px;
+
+        + {
+            label {
+                position: relative;
+                padding-left: 28px;
+                cursor: pointer;
+                line-height: 32px;
+                font-size: 14px;
+                display: inline-block;
+                color: #333;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    border: 1px solid $gray-103;
+                    border-radius: 100%;
+                    background: #fff;
+                    transform: translate(0, -50%);
+                    left: 0;
+                    top: 50%;
+                }
+
+                &:after {
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    background: url(/assets/images/icons/radio-unchecked.png) no-repeat center/cover;
+                    position: absolute;
+                    border-radius: 100%;
+                    -webkit-transition: all 0.2s ease;
+                    transition: all 0.2s ease;
+                    opacity: 0;
+                    transform: translate(0, -50%);
+                    left: 0;
+                    top: 50%;
+                }
+            }
+        }
+    }
+}

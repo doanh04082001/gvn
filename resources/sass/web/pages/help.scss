@@ -1,0 +1,54 @@
+.help-page {
+    margin-bottom: 50px;
+
+    .left-block {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: 5px;
+
+        ul {
+            padding: 10px;
+            
+            li {
+                font-size: 14px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $text-primary-main;
+        }
+
+        a:hover {
+            color: $orange;
+        }
+
+        .active {
+            color: $orange;
+        }
+
+        .active a {
+            color: $orange;
+        }
+
+        @include responsive(SM) {
+            .row {
+                margin-top: 1em;
+                --bs-gutter-x: 0rem;
+            }
+        }
+    }
+
+    .right-block {
+        padding-left: 15px;
+
+        .title {
+            font-size: 16px;
+            padding-bottom: 20px;
+        }
+
+        .content-title {
+            font-size: 14px
+        }
+    }
+}

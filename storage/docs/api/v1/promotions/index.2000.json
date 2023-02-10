@@ -1,0 +1,25 @@
+{
+    "code": 2000,
+    "message": "success",
+    "data": [
+        {
+            "id": "21d2efb0-cf13-4b94-8be9-4fe691024852",
+            "name": "Dedrick Wuckert",
+            "type": 2,
+            "discount_amount": 37,
+            "max_discount_amount": 42000,
+            "start_at": "2021-04-26 18:01:18",
+            "expire_at": "2021-06-16 04:01:18",
+            "images": {
+                "square": "http://<domain>/assets/images/default-square.jpg",
+                "rectangle": "http://<domain>/assets/images/default-rectangle.jpg"
+            },
+            "positions": [
+                "top"
+            ],
+            "status": 1,
+            "description": "Fugit nostrum sit qui facilis in est voluptas ab mollitia voluptatem doloremque porro voluptatem hic omnis.",
+            "created_at": "2021-05-26 02:38:49"
+        }
+    ]
+}

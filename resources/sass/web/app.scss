@@ -1,0 +1,24 @@
+// Common
+@import 'common';
+// Icons
+@import './fonts/icon/style';
+// Footer
+@import './components/footer';
+// top area
+@import './components/top-area';
+// popup login
+@import './components/login-form';
+// popup login
+@import './components/store';
+// popup register
+@import './components/register-form';
+// cart dropdown
+@import './components/cart-dropdown';
+// user drop down
+@import './components/user-dropdown';
+// notification-dropdown
+@import './components/notification-dropdown';
+// notification-icon
+@import './components/notification-icon.scss';
+// breadcrumbs
+@import './components/breadcrumbs';

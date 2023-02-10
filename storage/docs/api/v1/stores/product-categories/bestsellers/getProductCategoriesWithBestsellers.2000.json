@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "id": "7b498555-2665-4a87-a172-787adab4aa80",
+            "name": "Cơm văn phòng",
+            "image": "http://<domain>/storage/taxonomy-items/63m32K71laVzSz3Ns5IElJ7xeZkYm0MuENcPReaq.png",
+            "status": 1,
+            "products": [
+                {
+                    "id": "4e3a7759-b33b-467b-8fb3-9fe54df82347",
+                    "category_id": "7b498555-2665-4a87-a172-787adab4aa80",
+                    "promotion_id": "da580616-6d8b-4ca1-9882-18be8a51641e",
+                    "name": "Cơm ĐÙI GÀ RÁN shilin",
+                    "description": "1 cơm đùi gà cay sốt Thái,  1 trà trà đào, 1 khoai tây lắc",
+                    "status": 1,
+                    "sold": 4965,
+                    "slug": "com-dui-ga-ran-shilin",
+                    "image": "http://<domain>/storage/products/9qiNhzt6NojQjX0yzkezJKrKyYkjnGzxM7T7UmE2.jpg",
+                    "rating_count": 12,
+                    "rating": 4.7,
+                    "price": 57000,
+                    "sale_price": 47000,
+                    "promotion_price": 47000,
+                    "cost": 37000,
+                    "created_at": "2021-07-09 03:05:29"
+                }
+            ]
+        }
+    ],
+    "code": 2000,
+    "message": "success"
+}

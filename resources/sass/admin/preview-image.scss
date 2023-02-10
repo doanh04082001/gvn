@@ -1,0 +1,25 @@
+.image_view {
+    min-width: 2em;
+    max-width: 3em;
+    max-height: 3em;
+}
+
+.del-img-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 2px 5px !important;
+    background: #fff;
+    color: red !important;
+    font-size: 20px !important;
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+.vue-select2 {
+    width: 500px;
+}
+
+.up-img-btn {
+    position: relative;
+}

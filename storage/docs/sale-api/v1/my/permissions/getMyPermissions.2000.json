@@ -1,0 +1,20 @@
+{
+    "data": {
+        "is_super_admin": 0,
+        "permissions": [
+            "customers.create",
+            "customers.show",
+            "customers.edit",
+            "tables.show",
+            "tables.create",
+            "tables.edit",
+            "tables.delete",
+            "orders.show",
+            "orders.create",
+            "orders.edit",
+            "orders.delete"
+        ]
+    },
+    "code": 2000,
+    "message": "success"
+}

@@ -1,0 +1,44 @@
+// Declare the size corresponding to the device screen
+$XS428: 428px;
+$XS: 575.98px;
+$SM: 767.98px;
+$MD: 991.98px;
+$XL: 1199.98px;
+$XXL: 1399.98px;
+
+// media queries
+@mixin responsive($canvas) {
+    @if ($canvas == XS428) {
+        @media only screen and (max-width: $XS428) {
+            @content;
+        }
+    } @else if ($canvas == XS) {
+        @media only screen and (max-width: $XS) {
+            @content;
+        }
+    } @else if ($canvas == SM) {
+        @media only screen and (max-width: $SM) {
+            @content;
+        }
+    } @else if ($canvas == MD) {
+        @media only screen and (max-width: $MD) {
+            @content;
+        }
+    } @else if ($canvas == XL) {
+        @media only screen and (max-width: $XL) {
+            @content;
+        }
+    } @else if ($canvas == XXL) {
+        @media only screen and (max-width: $XXL) {
+            @content;
+        }
+    }
+}
+
+@mixin responsiveMinWidth($canvas) {
+    @if ($canvas == XL) {
+        @media only screen and (min-width: $XL) {
+            @content;
+        }
+    }
+}

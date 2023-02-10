@@ -1,0 +1,91 @@
+#chatbox {
+    width: 500px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    z-index: 99999;
+
+    @include responsive(XS) {
+        width: 100%;
+    }
+
+    .card-header {
+        cursor: pointer;
+
+        .card-header-title {
+            padding-left: 15px;
+            color: #f3b43e;
+        }
+    }
+
+    .chatbox-area {
+        width: 100%;
+        border-top: 1px solid rgba(0, 0, 0, .125);
+
+        #chatbox-content {
+            overflow-y: auto;
+            height: 300px;
+            padding: 15px;
+
+            .chat-message-group {
+                .chat-messages {
+                    float: left;
+                    width: 80%;
+                    margin-bottom: 20px;
+
+                    .message {
+                        float: left;
+                        padding: 10px;
+                        background: #eee;
+                        font-size: 13px;
+                        border-radius: 5px;
+                        margin-bottom: 3px;
+                    }
+
+                    .from {
+                        float: left;
+                        display: block;
+                        width: 100%;
+                        text-align: left;
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            .self {
+                .chat-messages {
+                    float: right;
+                    width: 100%;
+
+                    .message {
+                        float: right;
+                        background: #c7daed;
+                    }
+
+                    .from {
+                        float: left;
+                        display: block;
+                        width: 100%;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+
+        .chatbox-message {
+            padding: 0 15px;
+            border-top: 1px solid rgba(0, 0, 0, .125);
+
+            #chat-message {
+                border: none;
+            }
+
+            #button-send {
+                cursor: pointer;
+                align-self: center;
+                font-size: 20px;
+            }
+        }
+    }
+}

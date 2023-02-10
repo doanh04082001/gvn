@@ -1,0 +1,74 @@
+{
+    "data": {
+        "id": "0564c6a7-7f19-45c6-b806-9905c653848d",
+        "store_id": "04e5b4b9-ce8d-4d23-92f2-c7249a86778d",
+        "customer_id": "7d6c8063-cd8a-4251-9fd1-8b1e55d5d334",
+        "code": "60CDBAED5E0B1",
+        "status": 4,
+        "payment_status": 2,
+        "delivery_type": 2,
+        "received_at": "2021-06-19 10:18:19",
+        "amount": 695000,
+        "total_amount": 677000,
+        "discount": 12000,
+        "email": "marilie.ebert@monahan.biz",
+        "phone": "1-385-713-6239",
+        "shipping_name": "Ashley White",
+        "shipping_address": "5309 Eleanore Shores Apt. 134\nEast Aydenmouth, AL 27728",
+        "real_shipping_fee": 30000,
+        "shipping_fee": 30000,
+        "shipping_method": "ahamove",
+        "shipping_id": "2140F9U2",
+        "tracking_code": "https://cloudstg.ahamove.com/share-order/2140F9U2/84908842280",
+        "latitude": -69.649187,
+        "longitude": 26.091153,
+        "created_at": "2021-06-04 04:53:22",
+        "customer": {
+            "id": "016d0fb5-c593-4313-a83b-9237ef205f0b",
+            "name": "Nguyễn Hoàng Khải",
+            "email": "corkery.nigel@lesch.biz",
+            "avatar": null,
+            "phone": "0141392352",
+            "birthday": "1999-02-03",
+            "gender": 0,
+            "shipping_address": null
+        },
+        "voucher": {
+            "id": "a3d74cfb-0d75-4e87-b00d-14f91f69a3e3",
+            "name": "In rerum porro sunt quod.",
+            "code": "SL45ZNDNB",
+            "description": "Totam veritatis cupiditate rem itaque itaque earum qui et non sint qui sed ut cumque quaerat quisquam aliquam optio iste nihil sit rem.",
+            "status": 1,
+            "start_at": "2021-06-15 14:01:09",
+            "expire_at": "2021-07-18 13:01:09",
+            "type": 1,
+            "discount_amount": 45,
+            "max_discount_amount": 44000,
+            "min_order_amount": 83000,
+            "apply_count": 12,
+            "max_apply": 99,
+            "created_at": "2021-06-19 09:37:44"
+        },
+        "payment_method": {
+            "id": "a6d04f33-d098-4550-b7b2-a836470e4b01",
+            "code": "airpay",
+            "name": "Ví điện tử Airpay",
+            "icon": "http://<domain>/assets/images/payment-airpay.png"
+        },
+        "order_items": [
+            {
+                "product_id": "2d77e7bd-aaef-46f8-b61a-a016c4aa6bed",
+                "name": "Qui quam voluptatem repellat mollitia impedit. Et voluptatum dolores modi voluptas velit dolor qui.",
+                "image": "http://<domain>/storage/products/tx9y82Z6IOgDRJ7x2ZHWD1mCQqEiM1T34zX7PRFm.png",
+                "toppings": "4 Soluta iure eos quibusdam impedit voluptas exercitationem. + 4 Consequatur sit sit eligendi illo officiis. + 4 Et molestiae magnam odit et nobis autem quis. + 4 At repellendus commodi porro.",
+                "quantity": 4,
+                "price": 150000,
+                "sale_price": 150000,
+                "note": "Voluptatem omnis accusamus similique aut et nisi occaecati. Sit pariatur in exercitationem in nisi quo. Vel incidunt numquam repudiandae."
+            }
+        ],
+        "note": "Aut facilis unde porro atque commodi qui. Praesentium maiores nesciunt rerum. Dolorum explicabo ut repudiandae ea molestiae dicta nihil inventore."
+    },
+    "code": 2000,
+    "message": "success"
+}

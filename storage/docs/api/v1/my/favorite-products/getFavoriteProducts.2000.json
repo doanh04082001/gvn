@@ -1,0 +1,24 @@
+{
+    "data": [
+        {
+            "id": "2fa121ad-7422-463b-a18e-76da002a576b",
+            "category_id": "bc9f9560-9939-429f-9a36-ef490fe545c9",
+            "promotion_id": null,
+            "name": "Sit excepturi natus quis.",
+            "description": "Qui illum enim necessitatibus eum consequuntur quod nemo aliquam architecto est totam voluptas voluptas provident aliquam nisi quas hic mollitia.",
+            "status": 1,
+            "sold": 402,
+            "slug": "quos-et-natus-dolore",
+            "image": "http://<domain>/storage/products/fYtDlwvr50sOwl4Kili4aF8qYEOsPvLOQtUCAhFI.png",
+            "rating_count": 15,
+            "rating": 4.1,
+            "price": 169000,
+            "sale_price": 167000,
+            "promotion_price": 167000,
+            "cost": 74000,
+            "created_at": "2021-06-04 04:53:22"
+        }
+    ],
+    "code": 2000,
+    "message": "success"
+}

@@ -1,0 +1,30 @@
+{
+    "code": 2000,
+    "message": "success",
+    "data": [
+        {
+            "id": "49fd4c1e-846f-43a8-a50b-065c54ae33c9",
+            "name": "Gà rán",
+            "image": "http://<domain>/assets/images/default-square.jpg",
+            "status": 1
+        },
+        {
+            "id": "771c48fc-465b-4e86-8442-042ab4c51797",
+            "name": "Cơm văn phòng",
+            "image": "http://<domain>/assets/images/default-square.jpg",
+            "status": 1
+        },
+        {
+            "id": "c26aee66-c872-41d7-aa17-bf9fc141452c",
+            "name": "Combo",
+            "image": "http://<domain>/assets/images/default-square.jpg",
+            "status": 1
+        },
+        {
+            "id": "ed1fc794-3e0e-4cd2-94b3-859b84635e83",
+            "name": "Trà sữa, trái cây",
+            "image": "http://<domain>/assets/images/default-square.jpg",
+            "status": 1
+        }
+    ]
+}

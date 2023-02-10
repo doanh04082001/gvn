@@ -1,0 +1,99 @@
+@import '../variables';
+@import '../responsive';
+@import './cart-product-item';
+
+$pm-size-xl: 25px;
+
+.cart-dropdown {
+    color: $text-secondary-dark;
+    position: relative;
+
+    .dropdown-menu {
+        width: 425px;
+        padding: $pm-size-xl 20px;
+
+        .dropdown-title {
+            margin-bottom: $pm-size-xl;
+            color: $text-secondary-main;
+        }
+
+        .dropdown-cart-items {
+            max-height: 300px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            margin-bottom: $pm-size-xl;
+
+            .product-item {
+                margin-bottom: 1rem !important;
+                position: relative;
+
+                .row.row-sl {
+                    @include responsive(XXL) {
+                        margin: 0 calc(var(--bs-gutter-x) / -6);
+                    }
+
+                    @include responsive(XL) {
+                        margin: 0 calc(var(--bs-gutter-x) / -6);
+                    }
+                }
+
+                .image-product-item {
+                    height: auto;
+                }
+
+                .price-block {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    .price {
+                        margin-right: 0.5rem;
+                    }
+                }
+
+                .product-title {
+                    @include responsive(XS) {
+                        margin-top: 0.5rem;
+                    }
+                }
+
+                .col-md-9.col-sl {
+                    width: 50%;
+                }
+            }
+        }
+
+        .dropdown-total {
+            border-top: 2px solid $border-primary-main;
+            padding-top: $pm-size-xl;
+            margin-bottom: $pm-size-xl;
+            font-weight: 600;
+        }
+
+        .dropdown-footer {
+            .btn-to-card {
+                border-radius: 18px;
+                color: $white;
+                background-color: $bg-primary-main;
+                width: 100%;
+
+                &:hover {
+                    background-color: #f2a61b;
+                }
+            }
+        }
+
+        @include responsive(MD) {
+            left: 0 !important;
+        }
+
+        @include responsive(XS) {
+            width: 90vw;
+            left: 3vw !important;
+
+            ::-webkit-scrollbar {
+                width: 1vw;
+            }
+        }
+    }
+}

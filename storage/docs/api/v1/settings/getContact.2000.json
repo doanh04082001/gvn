@@ -1,0 +1,11 @@
+{
+    "data": {
+        "longitude": "10.772478867207235",
+        "latitude": "106.69126472479346",
+        "address": "Lầu 2, Twints Towers 11, 85 Cách Mạng Tháng Tám, Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
+        "email": "info@shilin.com",
+        "phone": "0123456789"
+    },
+    "code": 2000,
+    "message": "success"
+}

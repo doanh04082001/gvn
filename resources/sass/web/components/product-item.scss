@@ -1,0 +1,195 @@
+@import '../variables';
+@import '../responsive';
+
+$col-padding-xxl: 12.5px;
+
+.image-product-item {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.product-item-wrap {
+    border: 1px solid $border-primary-main;
+    padding: 1.25em;
+    margin-bottom: 1.5em;
+    line-height: 1;
+    color: $text-secondary-main;
+    letter-spacing: 0px;
+    cursor: pointer;
+
+    .info-product-wrap {
+        position: relative;
+    }
+
+    .title-color {
+        color: $text-primary-main;
+    }
+
+    h5 {
+        font-size: 1em;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    .product-title {
+        @include responsive(MD) {
+            font-size: .8em;
+        }
+    }
+
+    .product-description {
+        position: relative;
+        text-align: justify;
+        overflow-y: hidden;
+        font-size: 0.8em;
+        line-height: 1.6;
+        max-height: 4.8em;
+        margin-top: 15px;
+
+        @include responsive(XXL) {
+            max-height: 3.2em;
+        }
+
+        @include responsive(MD) {
+            display: none;
+        }
+
+        @include responsive(SM) {
+            display: block;
+            max-height: 3.2em;
+        }
+
+        @include responsive(XS) {
+            font-size: 0.8em;
+        }
+    }
+
+    .product-subinfo {
+        .product-apply-price {
+            position: absolute;
+            top: 0;
+            right: calc(var(--bs-gutter-x)/ 2);
+
+            del.price {
+                display: block;
+                color: $text-secondary-main;
+            }
+        }
+
+        .rating {
+            position: absolute;
+            bottom: 0;
+            right: calc(var(--bs-gutter-x)/ 2);
+            display: block;
+            font-size: .8em;
+
+            .shilin-star:before {
+                font-size: .75em;
+                position: relative;
+                bottom: 1px;
+                color: $bg-primary-main;
+            }
+        }
+
+        @include responsive(MD) {
+            font-size: .8em;
+        }
+
+        @include responsive(SM) {
+            font-size: 1em;
+        }
+    }
+
+    .row.row-sl {
+        margin-left: -$col-padding-xxl;
+        margin-right: -$col-padding-xxl;
+    }
+
+    .row.row-sl > * {
+        padding: 0 $col-padding-xxl;
+    }
+
+    @include responsive(XL) {
+        padding: .8rem;
+        
+        .row.row-sl {
+            margin: 0 calc(var(--bs-gutter-x)/ -4);
+        }
+
+        .row.row-sl > * {
+            padding: 0 calc(var(--bs-gutter-x)/ 4);
+        }
+
+        .product-subinfo {
+            padding-left: 0;
+
+            .product-apply-price {
+                padding-left: 0;
+                right: calc(var(--bs-gutter-x)/ 4);
+            }
+
+            .rating {
+                right: calc(var(--bs-gutter-x)/ 4);
+            }
+        }
+    }
+
+    @include responsive(SM) {
+        padding: 1.25rem;
+
+        .row.row-sl {
+            margin: 0 calc(var(--bs-gutter-x)/ -2);
+        }
+
+        .row.row-sl > * {
+            padding: 0 calc(var(--bs-gutter-x)/ 2);
+        }
+
+        .product-subinfo {
+            padding-left: 0;
+
+            .product-apply-price {
+                padding-left: 0;
+                right: calc(var(--bs-gutter-x)/ 2);
+            }
+
+            .rating {
+                right: calc(var(--bs-gutter-x)/ 2);
+            }
+        }
+    }
+
+    @include responsive(XS) {
+        padding: 1em;
+
+        .row.row-sl {
+            margin: 0 -1em;
+        }
+
+        .row.row-sl > * {
+            padding: 0 1em;
+        }
+
+        .product-info {
+            padding-left: 0 !important;
+        }
+
+        .product-subinfo {
+            padding-left: 0;
+
+            .product-apply-price {
+                padding-left: 0;
+                right: 1em;
+            }
+
+            .rating {
+                right: 1em;
+            }
+        }
+
+        .image-product-wrap {
+            padding-right: 0;
+        }
+    }
+}

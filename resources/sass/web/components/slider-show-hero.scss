@@ -1,0 +1,78 @@
+@import '../variables';
+@import '../responsive';
+
+// Top slider
+.slider-show-hero {
+
+    // Inner content
+    .carousel-inner {
+        height: calc(100vw / 3.035);
+
+        .carousel-item {
+            height: 100%;
+            
+            a {
+                cursor: initial;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    // Arrow button
+    button.carousel-control {
+        width: 5%;
+        opacity: 1;
+
+        @include responsive(XS) {
+            display: none;
+        }
+
+        span {
+            width: calc(100vw / 57);
+            height: calc(100vw / 57);
+            background-image: url(/assets/images/icons/carousel-control.png);
+        }
+
+        span.carousel-control-prev-icon {
+            transform: rotate(180deg);
+        }
+        
+    }
+
+    button.carousel-control:hover {
+        span {
+            background-image: url(/assets/images/icons/carousel-control-hover.png);
+            transform: none;
+        }
+
+        span.carousel-control-next-icon {
+            transform: rotate(180deg);
+        }
+
+        span.carousel-control-prev-icon {
+            position: relative;
+            bottom: 1px;
+        }
+    }
+
+    // Circel button
+    .carousel-indicators {
+        margin-bottom: calc(100vw / 68.3);
+
+        button {
+            width: calc(100vw / 136.6);
+            height: calc(100vw / 136.6);
+            border: 1px solid $green;
+            border-radius: 50%;
+        }
+    }
+
+    .carousel-indicators .active {
+        background-color: $green;
+    }
+}

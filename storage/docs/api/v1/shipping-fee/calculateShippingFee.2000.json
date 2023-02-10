@@ -1,0 +1,10 @@
+{
+    "data": {
+        "distance": 8.95,
+        "shipping_fee": 48000,
+        "currency": "VND",
+        "received_at": "2021-09-14 04:02:59"
+    },
+    "code": 2000,
+    "message": "success"
+}

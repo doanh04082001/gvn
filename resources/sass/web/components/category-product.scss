@@ -1,0 +1,45 @@
+@import '../variables';
+@import '../responsive';
+
+.category-product {
+    .nav-link {
+        &:hover {
+            border-color: $white $white $orange;
+            color: $orange;
+        }
+
+        color: $text-secondary-main;
+    }
+
+    .mbt-30 {
+        margin-bottom: 30px;
+    }
+
+    .nav-link {
+        padding: 0 20px 20px 16px;
+    }
+
+    .nav-link.active {
+        color: $orange;
+        background-color: $white;
+        border-color: $white $white $orange;
+    }
+
+    .custom-nav {
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        width: 100%;
+
+        .custom-li {
+            display: inline-block;
+        }
+
+        @include responsive(SM) {
+            overflow-y: hidden;
+            white-space: nowrap;
+            border-bottom: 0;
+        }
+    }
+}

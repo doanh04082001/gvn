@@ -1,0 +1,76 @@
+@import "../variables";
+
+.input-group-icon-l input {
+    padding-left: 35px;
+}
+
+.input-group-icon-l .icon {
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    z-index: 1000;
+}
+
+.pb-39 {
+    padding-bottom: 39px;
+}
+
+.pb-25 {
+    padding-bottom: 25px;
+}
+
+.line-label-center {
+    position: relative;
+
+    .label {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        top: -20px;
+
+        label {
+            background: white;
+        }
+    }
+}
+
+#forgot-password-form-modal {
+    .text-uppercase {
+        margin-bottom: 29px;
+    }
+
+    .btn-shilin-primary, .rounded-pill {
+        height: 36px;
+    }
+
+    .form-submit {
+        margin-bottom: 6px;
+    }
+
+    .btn-shilin-primary {
+        margin-top: -4px;
+        margin-bottom: 4px;
+    }
+
+    .input-group-icon-l {
+        margin-top: -30px;
+        margin-bottom: 13px;
+    }
+}
+
+#register-form-modal {
+    .form-submit {
+        margin-top: 14px;
+        margin-bottom: 9px;
+    }
+}
+
+#login-form-modal {
+    .form-row {
+        margin-left: -5px;
+        .rounded-pill {
+            height: 36px;
+        }
+    }
+}
+

@@ -1,0 +1,12 @@
+{
+    "code": 1000,
+    "message": "The given data was invalid.",
+    "errors": {
+        "status": [
+            "The status field is required."
+        ],
+        "shipping_method": [
+            "The shipping method field is required."
+        ]
+    }
+}

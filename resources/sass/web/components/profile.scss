@@ -1,0 +1,60 @@
+.profile-page {
+    margin-bottom: 50px;
+
+    .left-block {
+        padding-left: 24px;
+        padding-right: 15px;
+
+        @include responsive(MD) {
+            padding-left: 15px;
+        }
+
+        .form-control {
+            padding: 26px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $text-primary-main;
+        }
+
+        a:hover {
+            color: $orange;
+        }
+
+        .item-menu {
+            font-size: 14px;
+            line-height: 26px;
+            margin-bottom: 26px;
+
+            span {
+                font-size: 24px;
+                margin-right: 16px;
+            }
+
+            &:hover {
+                color: $orange;
+            }
+        }
+
+        .active {
+            color: $orange;
+        }
+
+        .active a {
+            color: $orange;
+        }
+
+        @include responsive(SM) {
+            .row {
+                margin-top: 1em;
+                --bs-gutter-x: 0rem;
+            }
+        }
+    }
+
+    .right-block {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

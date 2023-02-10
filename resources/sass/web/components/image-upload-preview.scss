@@ -1,0 +1,54 @@
+.image-upload-preview {
+    position: relative;
+    min-height: 6.625em;
+
+    .image-preview {
+        width: 6.625em;
+        height: 6.625em;
+        margin-right: 1em;
+        float: left;
+        position: relative;
+
+        > img {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:hover {
+            .image-remove {
+                display: inline-block;
+            }
+        }
+
+        .image-remove {
+            display: none;
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+        }
+    }
+
+    .image-upload {
+        input {
+            + label {
+                width: 90px;
+                height: 90px;
+                text-align: center;
+                font-size: 3em;
+                padding-top: 0.2em;
+                background: #fff 0 0 no-repeat padding-box;
+                border: 1px dashed $oslo-grey;
+                border-radius: 3px;
+                color: $oslo-grey;
+                cursor: pointer;
+
+                &:hover {
+                    background: #f1f1f1;
+                }
+            }
+        }
+    }
+}

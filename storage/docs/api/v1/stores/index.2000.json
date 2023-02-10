@@ -1,0 +1,16 @@
+{
+    "code": 2000,
+    "message": "success",
+    "data": [
+        {
+            "id": "0f16e506-4c19-421e-99aa-e44073456243",
+            "name": "Shilin: gà rán đài loan, trà trái cây, cơm văn phòng Đề Thám",
+            "phone": "0123456789",
+            "address": "40 Đề Thám, Phường Cầu Ông Lãnh, Quận 1, Thành phố Hồ Chí Minh",
+            "latitude": 10.763718773913,
+            "longitude": 106.69582839563,
+            "rating": 5,
+            "rating_count": 0
+        }
+    ]
+}

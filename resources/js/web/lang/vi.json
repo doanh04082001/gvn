@@ -1,0 +1,17 @@
+{
+    "button": {
+        "ok": "Ok",
+        "close": "Đóng"
+    },
+    "other_cart_exists_message": "Bạn đang mua hàng tại cửa hàng khác, giỏ hàng hiện tại sẽ bị xoá.<br/>Bạn có muốn tiếp tục không?",
+    "confirm_cart_existed": "Hành động này sẽ xoá giỏ hàng hiện tại.<br/>Bạn có muốn tiếp tục không?",
+    "otp_resent": "Đã gửi lại mã vào điện thoại của bạn.",
+    "error_retry": "Có lỗi xảy ra vui lòng thử lại sau. Cám ơn!",
+    "out_of_working_time": "Xin lỗi! Ngoài giờ làm việc của chúng tôi. Giờ làm việc là 9h00 - 20h30 và nghỉ chủ nhật. Cảm ơn!",
+    "error_unauthorized": "Bạn phải đăng nhập.",
+    "cancel_order": "Bạn chắc chắn muốn huỷ đơn hàng?",
+    "account_unverified": "Tài khoản chưa xác thực. Bạn phải xác thực.",
+    "account_blocked": "Tài khoản đã bị khóa!",
+    "store_not_exists": "Cửa hàng không còn tồn tại. Hãy chọn nơi đặt khác.",
+    "product_not_exists": "Sản phẩm đã thay đổi hoặc không còn bán tại cửa hàng."
+}

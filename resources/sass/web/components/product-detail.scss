@@ -1,0 +1,283 @@
+@import '../variables';
+@import '../responsive';
+
+$pm-size-xl: 1.5rem;
+$pm-size-xs: .75rem;
+
+#product-detail-modal {
+    .row-mr-sl {
+        margin-left: -12.5px;
+        margin-right: -12.5px;
+
+        @include responsive(XS) {  
+            margin-left: -$pm-size-xs;
+            margin-right: -$pm-size-xs;
+        }
+    }
+
+    .col-pd-sl {
+        padding: 0 12.5px;
+
+        @include responsive(XS) {  
+            padding: 0 $pm-size-xs;
+        }
+    }
+
+    line-height: 1;
+    font-size: 1rem;
+
+    .modal-header {
+        justify-content: center;
+        position: relative;
+        color: $text-primary-dark;
+        padding: $pm-size-xl;
+
+        h5 {
+            font-size: 1.25em;
+        }
+
+        @include responsive(XS) {
+            padding: $pm-size-xs;
+
+            .btn-close {
+                font-size: 1.25em;
+                top: $pm-size-xs;
+                right: $pm-size-xs;
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 0 $pm-size-xl;
+        max-height: 60vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        @include responsive(XS) {
+            padding: 0 $pm-size-xs;
+        }
+    }
+
+    .modal-footer {
+        padding: $pm-size-xl;
+        border-top: none;
+
+        div.w-100 {
+            display: none;
+        }
+
+        button {
+            font-size: .75em;
+            width: 10.25rem;
+            height: 2.5rem;
+            padding: 0;
+            color: $white;
+            border-radius: 1.25rem;
+            text-transform: uppercase;
+            margin: 0 0 0 .5rem !important;
+        }
+
+        .btn-add-to-card {
+            background-color: $bg-success;
+        }
+        
+        .btn-buy-now {
+            background-color: $bg-primary-main;
+        }
+
+        @include responsive(XS) {
+            justify-content: space-between;
+            padding: $pm-size-xs;
+
+            button {
+                width: 8.5rem;
+                height: 2rem;
+                margin: 0;
+            }
+        }
+    }
+
+    @include responsive(MD) {
+        .modal-lg {
+            max-width: 652px;
+        }
+    }
+
+    @include responsive(SM) {
+        font-size: .9rem;
+
+        .modal-lg {
+            max-width: none;
+        }
+
+        .modal-dialog {
+            margin: .5rem;
+        }
+    }
+
+    @include responsive(XS) {
+        font-size: .875rem;
+    }
+}
+
+.product-detail-form {
+    .product-detail {
+        padding-bottom: $pm-size-xl;
+        color: $text-secondary-main;
+
+        .product-image {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .product-name {
+            color: $text-primary-dark;
+            font-size: 1em;
+            margin-bottom: .875rem;
+        }
+
+        .product-description {
+            font-size: .75em;
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-size: 1em;
+            margin-bottom: 1rem;
+            
+            strong {
+                color: $text-primary-dark;
+            }
+        }
+
+        .product-quantity {
+            display: flex;
+            align-items: center;
+            font-size: 0.75em;
+            margin-bottom: 1rem;
+
+            button,
+            .quantity {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                color: $text-primary-dark;
+                margin-left: 1rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                padding: 0;
+                border: 1px solid $border-primary-main;
+                border-radius: 50%;
+            }
+
+            button:hover {
+                border-color: $bg-primary-main;
+                color: $bg-primary-main;
+            }
+
+            button:focus {
+                box-shadow: 0px 0px 0px 4px #f3b43e82;
+                border: 1px solid $bg-primary-main;
+            }
+        }
+
+        .product-note {
+            height: 35px;
+            max-height: 54px;
+            border: 1px solid $border-primary-main;
+            color: $text-primary-main;
+            font-size: .875em;
+        }
+        
+        .product-note::placeholder {
+            color: $text-secondary-main;
+            font-size: .875em;
+        }
+
+        @include responsive(XS) {
+            padding-bottom: $pm-size-xs;
+
+            .product-name {
+                font-size: 1em;
+            }
+
+            .product-name,
+            .product-description,
+            .product-price,
+            .product-quantity {
+                margin-bottom: $pm-size-xs;
+            }
+        }
+    }
+
+    .wrap-info {
+        padding-top: $pm-size-xl;
+        border-top: 1px solid $border-primary-main;
+        border-bottom: 1px solid $border-primary-main;
+
+        .variant-group,
+        .topping-group {
+            margin-bottom: $pm-size-xl;
+        }
+        
+        h5 {
+            font-size: 1em;
+            margin-bottom: $pm-size-xl;
+        }
+
+        .form-check-input {
+            position: relative;
+            cursor: pointer;
+            margin: 0 0.5rem 0 0;
+        }
+
+        .form-check-label {
+            display: inline;
+            font-size: 0.875em;
+            color: $text-primary-main;
+        }
+
+        .form-check-input:checked[type=radio] {
+            background: #fff none;
+            border-color: $bg-primary-main;
+
+            &:after {
+                width: 0.5em;
+                height: 0.5em;
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                background-color: $bg-primary-main;
+                top: calc(50% - 0.25em);
+                left: calc(50% - 0.25em);
+            }
+        }
+
+        .form-check-input[type=radio]:focus,
+        .form-check-input[type=checkbox]:focus {
+            box-shadow: 0px 0px 0px 4px #f3b43e82;
+            border: 1px solid $bg-primary-main;
+        }
+
+        .form-check-input:checked[type=checkbox] {
+            border-color: $bg-primary-main;
+            background-color: $bg-primary-main;
+        }
+
+        @include responsive(XS) {
+            padding-top: $pm-size-xs;
+
+            .toppings-detail {
+                h5 {
+                    margin-bottom: $pm-size-xs;
+                    font-size: 1em;
+                }
+            }
+
+            .variant-group,
+            .topping-group {
+                margin-bottom: $pm-size-xs;
+            }
+        }
+    }
+}

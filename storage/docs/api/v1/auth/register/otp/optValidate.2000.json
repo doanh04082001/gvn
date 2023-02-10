@@ -1,0 +1,18 @@
+{
+    "data": {
+        "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9zaGlsbGluLmxvY2FsXC9hcGlcL3YxXC9hdXRoXC9yZWdpc3Rlclwvb3RwIiwiaWF0IjoxNjI2NjgyNjM1LCJleHAiOjE2MjY2ODYyMzUsIm5iZiI6MTYyNjY4MjYzNSwianRpIjoiU0FYSGZ2WmVaeXlCdkp3NCIsInN1YiI6ImVhMWM2NzI1LTkwZTQtNDU4ZS1hNmQ0LTg1ZjYyZGExMTE3NCIsInBydiI6IjFkMGEwMjBhY2Y1YzRiNmM0OTc5ODlkZjFhYmYwZmJkNGU4YzhkNjMifQ.Dyq6lryW3HZ2bxFIKu62LsuT9YwD8FWCMNQoAW0aef8",
+        "token_type": "Bearer",
+        "expires_in": 3600,
+        "user": {
+            "id": "016d0fb5-c593-4313-a83b-9237ef205f0b",
+            "name": "Nguyễn Thị Thu Hiếu",
+            "email": "skeeling@hotmail.com",
+            "avatar": null,
+            "phone": "0590392316",
+            "birthday": "1977-07-23",
+            "gender": 0
+        }
+    },
+    "code": 2000,
+    "message": "success"
+}

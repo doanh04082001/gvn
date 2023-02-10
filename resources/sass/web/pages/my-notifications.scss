@@ -1,0 +1,79 @@
+.notification-container {
+    margin-bottom: 1rem;
+    .read-all-notifications {
+        text-align: right;
+        margin-bottom: 14px;
+
+        a {
+            font: normal normal normal 12px/18px Open Sans;
+            letter-spacing: -0.29px;
+            color: $bg-danger;
+            cursor: pointer;
+        }
+    }
+
+    li.notification-item {
+        list-style: none;
+        padding: 0;
+        border-top: 1px solid $line-status-gray;
+        a {
+            flex-wrap: wrap;
+            padding: 12px 13px 15px 12px;
+            background: $white;
+        }
+        a.unread {
+            background: $bg-unread-notification;
+        }
+
+        .notification-icon {
+            padding-top: 5px;
+            width: 48px;
+            .shilin-notification-icon {
+                position: relative;
+                .notification-icon-unread {
+                    top: 0px;
+                    right: -3px;
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    background: $bg-danger;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .notification-title {
+            color: $text-primary-main;
+            font: normal normal 600 14px/16px Open Sans;
+            letter-spacing: -0.34px;
+        }
+
+        .notification-body,
+        .notification-created-at {
+            margin-top: 4px;
+            margin-bottom: 0;
+            font: normal normal normal 12px/18px Open Sans;
+            letter-spacing: -0.29px;
+        }
+
+        .notification-body {
+            color: $text-secondary-main;
+        }
+        .notification-created-at {
+            color: $text-grey-notification;
+        }
+
+        .divider-line {
+            margin-top: 15px;
+        }
+    }
+    li.notification-empty {
+        list-style: none;
+        text-align: center;
+        a > p {
+            font: normal normal 600 14px/16px Open Sans;
+            letter-spacing: -0.34px;
+            color: $text-primary-main;
+        }
+    }
+}

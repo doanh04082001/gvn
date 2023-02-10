@@ -1,0 +1,78 @@
+.notification-setting {
+    min-height: 350px;
+    margin-bottom: 30px;
+
+    .text-title {
+        padding: 20px;
+    }
+
+    .right-input {
+        padding-right: 26px;
+
+        .form-switch {
+            input {
+                float: right;
+            }
+        }
+    }
+
+    .change-state {
+        margin-top: 0.25em;
+        vertical-align: top;
+        background-color: $white;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+
+    .change-state:focus {
+        border: none;
+        box-shadow: none;
+    }
+
+    .form-switch .change-state {
+        width: 46px;
+        height: 28px;
+        background-image: url(/assets/images/icons/container-1.png);
+        transition: background-position 0.15s ease-in-out;
+    }
+
+    .change-state:checked {
+        width: 46px;
+        height: 28px;
+        background-image: url(/assets/images/icons/container.png);
+        transition: background-position 0.15s ease-in-out;
+    }
+
+    .font-14 {
+        font-size: 14px;
+        padding: 5px 5px 5px 20px;
+        color: $text-color;
+    }
+
+    .font-12 {
+        font-size: 12px;
+        padding: 5px 5px 5px 20px;
+        color: $oslo-grey;
+    }
+
+    @include responsive(SM) {
+        margin-top: 10px;
+
+        .left-text {
+            width: 80%;
+            position: absolute;
+        }
+
+        .form-switch {
+            position: relative;
+            margin-left: 85%;
+        }
+    }
+}

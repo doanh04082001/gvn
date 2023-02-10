@@ -1,0 +1,101 @@
+{
+    "data": [
+        {
+            "id": "016d0fb5-c593-4313-a83b-9237ef205f0b",
+            "store_id": "0ecd3b41-1297-4cf1-b7b6-2f7e9565d4dc",
+            "customer_id": "e2f58292-2dad-4c20-a438-df84fd8175c3",
+            "code": "61512B3051B19",
+            "status": 0,
+            "payment_status": 1,
+            "delivery_type": 1,
+            "received_at": null,
+            "amount": 1855000,
+            "total_amount": 1855000,
+            "discount": 0,
+            "email": "corkery.nigel@lesch.biz",
+            "phone": "0141392352",
+            "shipping_name": "Hung",
+            "shipping_address": "Miss Ao Dai Building, 21 Nguyễn Trung Ngạn, Bến Nghé, Quận 1, Hồ Chí Minh, Vietnam",
+            "shipping_fee": 0,
+            "real_shipping_fee": null,
+            "shipping_method": null,
+            "shipping_id": null,
+            "tracking_code": null,
+            "latitude": -40.050822,
+            "longitude": -2.707847,
+            "created_at": "2021-09-27 02:23:44",
+            "store": {
+                "id": "0ecd3b41-1297-4cf1-b7b6-2f7e9565d4dc",
+                "name": "CN1: Số 19/1 Nguyễn Thị Minh Khai, P. Bến Nghé, Q.1",
+                "phone": "0909005214",
+                "address": "Số 19/1 Nguyễn Thị Minh Khai, P. Bến Nghé, Q.1, Thành phố Hồ Chí Minh",
+                "latitude": 10.847474660623,
+                "longitude": 106.76860964165,
+                "rating": 5,
+                "rating_count": 0
+            },
+            "customer": {
+                "id": "e2f58292-2dad-4c20-a438-df84fd8175c3",
+                "name": "Nguyễn Hoàng Khải",
+                "email": "corkery.nigel@lesch.biz",
+                "avatar": null,
+                "phone": "0141392352",
+                "birthday": "1999-02-03",
+                "gender": 0,
+                "shipping_address": null
+            },
+            "voucher": {
+                "id": "a3d74cfb-0d75-4e87-b00d-14f91f69a3e3",
+                "name": "In rerum porro sunt quod.",
+                "code": "SL45ZNDNB",
+                "description": "Totam veritatis cupiditate rem itaque itaque earum qui et non sint qui sed ut cumque quaerat quisquam aliquam optio iste nihil sit rem.",
+                "status": 1,
+                "start_at": "2021-06-15 14:01:09",
+                "expire_at": "2021-07-18 13:01:09",
+                "type": 1,
+                "discount_amount": 45,
+                "max_discount_amount": 44000,
+                "min_order_amount": 83000,
+                "apply_count": 12,
+                "max_apply": 99,
+                "created_at": "2021-06-19 09:37:44"
+            },
+            "payment_method": {
+                "id": "2b6891ca-ceee-4b28-bf82-116fa01e3f36",
+                "code": "momo",
+                "name": "Ví điện tử MoMo",
+                "icon": "http://<domain>/assets/images/payment-momo.png"
+            },
+            "order_items": [
+                {
+                    "product_id": "14fa4242-7f3b-43c1-8178-fd95b658846f",
+                    "name": "Khoai tây lắc phô mai",
+                    "image": "http://<domain>/storage/products/2021/09/27/6OHhZyu7ACD3k61NLxDJrTloWH2utmdVNXwAjYO4.jpg",
+                    "toppings": "1 Salad Sốt Mè",
+                    "quantity": 1,
+                    "price": 83000,
+                    "sale_price": 63000,
+                    "note": "Sed placeat itaque ut eos dolores quia. Ipsum impedit quam corrupti ad. Animi delectus nulla dolores quod provident et et. Qui dolor dolor qui."
+                }
+            ],
+            "note": "Provident nesciunt minima et praesentium ex nihil. Fugit quisquam qui id consequatur."
+        }
+    ],
+    "links": {
+        "first": "http://<domain>/sale-api/v1/stores/0ecd3b41-1297-4cf1-b7b6-2f7e9565d4dc/orders?page=1",
+        "last": "http://<domain>/sale-api/v1/stores/0ecd3b41-1297-4cf1-b7b6-2f7e9565d4dc/orders?page=2",
+        "prev": null,
+        "next": "http://<domain>/sale-api/v1/stores/0ecd3b41-1297-4cf1-b7b6-2f7e9565d4dc/orders?page=2"
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 2,
+        "path": "http://<domain>/sale-api/v1/stores/0ecd3b41-1297-4cf1-b7b6-2f7e9565d4dc/orders",
+        "per_page": 10,
+        "to": 10,
+        "total": 12
+    },
+    "code": 2000,
+    "message": "success"
+}

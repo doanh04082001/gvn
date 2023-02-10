@@ -1,0 +1,21 @@
+@import "../variables";
+@import "../responsive";
+
+.show-promotion {
+    .promotion {
+        height: calc(100vw / 3.035);
+
+        .img-promotion {
+            height: 100%;
+
+            a {
+                cursor: initial;
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.shilin-notification-icon {
+    font-size: 32px;
+}
+
+.shilin-notification-icon.shilin-infor-order {
+    color: $link-light;
+}
+
+.shilin-notification-icon.shilin-infor-promotion {
+    color: $bg-danger;
+}
+
+.shilin-notification-icon.shilin-infor-bell {
+    color: $orange;
+}
+
+.shilin-notification-icon.shilin-infor-chat {
+    color: $bg-success;
+}

@@ -1,0 +1,33 @@
+@import "../variables";
+
+.categories{
+    border: 1px solid $border-primary-main;
+    border-radius: 8px;
+    padding: 18px 0;
+    margin-top: 25px;
+
+    .category-item{
+        .img-circle{
+            width: 68px;
+            border-radius: 50%;
+            border: none;
+        }
+        .title{
+            color: $text-primary-main;
+            font-size: 14px;
+            padding-top: 10px;
+        }
+        a{
+            color: $text-primary-main;
+            text-decoration: none;
+        }
+
+    }
+    .owl-dots{
+        display: none;
+    }
+    p.title{
+        margin-bottom: 0;
+    }
+
+}

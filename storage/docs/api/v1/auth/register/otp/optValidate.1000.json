@@ -1,0 +1,15 @@
+{
+    "code": 1000,
+    "message": "The given data was invalid.",
+    "errors": {
+        "customer_id": [
+            "The customer id field is required."
+        ],
+        "request_id": [
+            "The request id field is required."
+        ],
+        "otp": [
+            "The otp field is required."
+        ]
+    }
+}

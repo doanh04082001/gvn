@@ -1,0 +1,26 @@
+{
+    "data": {
+        "provinces": [
+            {
+                "id": "df9d7f60-3f20-40ac-8a5e-8af947a9a041",
+                "name": "An Giang",
+                "districts": [
+                    {
+                        "id": "797d2163-74f2-4a1e-92a7-1b35c578f857",
+                        "province_id": "df9d7f60-3f20-40ac-8a5e-8af947a9a041",
+                        "name": "An Phú",
+                        "wards": [
+                            {
+                                "id": "8d7b4db3-4573-4b7f-a567-cc3d43e65d5b",
+                                "district_id": "797d2163-74f2-4a1e-92a7-1b35c578f857",
+                                "name": "An Phú"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "code": 2000,
+    "message": "success"
+}

@@ -1,0 +1,208 @@
+[v-cloak] {
+    display: none;
+}
+
+.pace-activity {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.95;
+    display: block;
+    left: 0;
+    top: 3px;
+}
+
+div.dataTables_wrapper .datatable-header--custom {
+    .dataTables_filter {
+        text-align: unset;
+
+        label > input.form-control {
+            height: calc(2.25rem + 2px);
+            width: 100%;
+        }
+    }
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+$spinAnimatioName: 'spin';
+@include keyframes($spinAnimatioName) {
+    0% {
+        -webkit-transform: rotate(0deg);
+        /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);
+        /* IE 9 */
+        transform: rotate(0deg);
+        /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);
+        /* IE 9 */
+        transform: rotate(360deg);
+        /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+/* Loaded styles */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+
+    .loader-section {
+        position: fixed;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        background: #fff;
+        opacity: 0.9;
+        z-index: 1000;
+    }
+
+    .loader-section.section-left {
+        left: 0;
+    }
+
+    .loader-section.section-right {
+        right: 0;
+    }
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    z-index: 1001;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #e74c3c;
+        -webkit-animation: spin 3s linear infinite;
+        animation: spin 3s linear infinite;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #f9c922;
+        -webkit-animation: spin 1.5s linear infinite;
+        animation: spin 1.5s linear infinite;
+    }
+}
+
+.loaded {
+    #loader-wrapper {
+        .loader-section.section-left {
+            -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+            -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        .loader-section.section-right {
+            -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+            transform: translateX(100%);
+            -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        visibility: hidden;
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+        -webkit-transition: all 0.3s 1s ease-out;
+        transition: all 0.3s 1s ease-out;
+    }
+
+    #loader {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+    }
+}
+
+.group-row {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.search-form--left {
+    .dataTables_filter {
+        text-align: left;
+        float: left;
+    }
+}
+
+.image-on-datatable {
+    min-width: 2em;
+    max-width: 3em;
+    max-height: 3em;
+}
+
+// Custom switch
+.custom-switch.custom-switch-on-success
+.custom-control-input:disabled:checked ~
+.custom-control-label::before {
+    opacity: 0.5;
+}
+
+// ckeditor
+.ck-editor__editable {
+    min-height: 400px;
+}
+
+// Vue-select error
+.form-control.is-invalid,
+.vue-select2.is-invalid {
+    background-image: none !important;
+    border-color: #ced4da !important;
+}
+
+.vue-select-sm .vs__dropdown-toggle {
+    height: calc(1.8125rem + 2px);
+    display: flex;
+    align-items: center;
+    font-size: .875rem;
+}
