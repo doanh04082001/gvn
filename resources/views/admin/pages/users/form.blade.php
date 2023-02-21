@@ -28,7 +28,6 @@
 @stop
 
 @section('content')
-
     <div class="row" id="app-user-form">
         <div class="col-12">
             <div class="card card-outline card-primary">
@@ -48,11 +47,6 @@
                         </div>
                     </div>
                 </div>
-                {{-- @php
-                    foreach ($user->teams as $key => $value) {
-                        $value->id == 1 ? dd('selected') : '';
-                    }
-                @endphp --}}
                 <div class="card-body">
                     <form method="POST" @keypress.enter.prevent class="mb-0" ref="userFrm"
                         action="{{ $isEdit ? route('admin.users.update', $user->id) : route('admin.users.store') }}">
@@ -147,24 +141,18 @@
                                         @enderror
                                     </div>
                                 </div>
-
                                 <div class="form-group row">
                                     <label for="team" class="col-sm-3 col-lg-4 col-xl-3 col-form-label">
                                         {{ __('pages.users.team') }}
                                         <span class="text-danger">*</span>
                                     </label>
                                     <div class="col-sm-9 col-lg-8 col-xl-9">
-                                        <select name="team" id="team" required
-                                            class="form-control @error('team') is-invalid @enderror">
-                                            <option value="">{{ __('pages.users.select_team') }}</option>
-                                            @foreach ($teams as $key => $team)
-                                                <option value="{{ $team->id }}"
-                                                    {{ old('user_role') === $role->id ? 'selected' : '' }}
-                                                    @if ($isEdit) @foreach ($user->teams as $key => $value)
-                                                          {{ $value->id === $team->id ? 'selected' : '' }}
-                                                        @endforeach @endif>
-                                                    {{ $team->name }}
-                                                </option>
+                                        <select class="select2-multiple-team" name="team[]" id="team" required multiple="multiple"
+                                            id="select2Multiple">
+                                            @foreach ($teams as $team )
+                                                <option {{ $isEdit ? ($user->teams->contains('id',$team->id) ? 'selected' : ''):'' }}
+                                                    value="{{$team->id}}" > {{$team->name}}
+                                                </option>   
                                             @endforeach
                                         </select>
                                     </div>
@@ -243,10 +231,58 @@
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('/vendor/vue-select/vue-select.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <style>
+    /* .select2 .select2-container  */
+    .select2-container--default{
+        width: 100% !important;
+    }
+    .select2-container--default .select2-selection--single,
+        .select2-selection .select2-selection--single {
+            padding: 3px 0px;
+            height: 30px;
+        }
+
+        .select2-container {
+            margin-top: -5px;
+        }
+
+        option {
+            white-space: nowrap;
+        }
+
+        .select2-container--default .select2-selection--single {
+            background-color: #fff;
+            border: 1px solid #aaa;
+            border-radius: 0px;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            color: #216992;
+        }
+
+        .select2-container--default .select2-selection--multiple {
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .select2-container--default .select2-results__group {
+            background-color: #eeeeee;
+        }
+    </style>
 @stop
 
 @section('js')
-    <script></script>
+    <script>
+        $(document).ready(function() {
+            $('.select2-multiple-team').select2({
+                placeholder: "Chọn team",
+                allowClear: true
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="path/to/select2.min.js"></script>
     <script src="{{ asset('/vendor/vue-select/vue-select.js') }}"></script>
     <script type="module" src="{{ asset('/assets/admin/js/pages/user-form.js') }}"></script>
 @stop

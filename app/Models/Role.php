@@ -28,9 +28,8 @@ class Role extends SpatieRole
      */
     protected $keyType = 'string';
 
-    const SUPER_ADMIN_NAME = 'super_admin';
-    const LEADER = 'leader';
-    const STAFF = 'nhân viên';
-
-   
+    const SUPER_ADMIN_NAME = 'Super_admin';
+    const LEADER = 'Leader';
+    const STAFF = 'Staff';
+    const OFFICE = 'Office';
 }

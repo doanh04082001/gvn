@@ -1,9 +1,0 @@
-{
-    "code": 1003,
-    "message": "The given data was invalid.",
-    "errors": {
-        "email": [
-            "The avatar has already been taken."
-        ]
-    }
-}

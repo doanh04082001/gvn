@@ -19,14 +19,9 @@ class EnsureCustomerCanAccess
      */
     public function handle(Request $request, Closure $next)
     {
-        if (auth()->user()->status == Customer::STATUS_INACTIVE) {
-            throw new UserBlockException();
-        }
-
         if (!auth()->user()->verified_at) {
             throw new UserUnverifiedException();
-        }
-        
+        } 
         return $next($request);
     }
 }

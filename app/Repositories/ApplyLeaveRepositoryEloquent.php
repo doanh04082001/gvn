@@ -37,30 +37,25 @@ class ApplyLeaveRepositoryEloquent extends BaseRepository implements ApplyLeaveR
 
     public function applyLeaves()
     {
-        $user = auth()->user();
-        if ($user->isLeader()) {
-            $teams = $user->teams;
-            foreach ($teams as $key => $team) {
+        $teams = auth()->user()->teams;
+            $arrIdUserOfTeams = [];
+            foreach ($teams as $team) {
                 $result = DB::table('team_user')
                     ->where('team_id', $team->id)
                     ->get();
                 $userOfTeam = collect($result);
-                $arrIdUserOfTeams = [];
-                foreach ($userOfTeam as $key => $user) {
+                foreach ($userOfTeam as $user) {
                     $arrIdUserOfTeams[] = $user->user_id;
                 }
                 $arrIdUserOfTeams = array_diff($arrIdUserOfTeams, [auth()->id()]);
-                $listApplyLeaveByIds = ApplyLeave::whereIn('user_id', $arrIdUserOfTeams)
-                    ->get();
-                return $listApplyLeaveByIds;
             }
-        }
-        return ApplyLeave::where('user_id', '!=', auth()->id())->orderBy('created_at', 'DESC')->get();
+            $listApplyLeaveByIds = ApplyLeave::whereIn('user_id', $arrIdUserOfTeams)->where('status', '!=', ApplyLeave::STATUS_SUCCESS)->latest()->get();
+            return $listApplyLeaveByIds;    
     }
 
     public function getApplyLeaveStatus()
     {
-        return ApplyLeave::where('status', '=', '1')->get();
+        return ApplyLeave::latest()->get();
     }
 
     /**
@@ -115,7 +110,6 @@ class ApplyLeaveRepositoryEloquent extends BaseRepository implements ApplyLeaveR
     }
 
     public function getStatistic($params) {
-        // dd($params);
         $user_id = $params['user_id'] ?? null;
         $start_date = $params['start_date'] ?? null;
         $end_date = $params['end_date'] ?? null;

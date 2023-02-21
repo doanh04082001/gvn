@@ -18,12 +18,12 @@ return [
     |
      */
     'all' => [
-        App\Providers\RegisterViaOtpServiceProvider::class,
+        // App\Providers\RegisterViaOtpServiceProvider::class,
         // App\Services\ShippingFee\ShippingFeeServiceProvider::class,
         App\Services\Payment\PaymentServiceProvider::class,
         // App\Services\Cart\CartServiceProvider::class,
         // App\Services\Shipping\ShippingServiceProvider::class,
-        App\Providers\GoogleDriveServiceProvider::class,
+        // App\Providers\GoogleDriveServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
     ],
 

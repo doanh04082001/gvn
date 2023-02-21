@@ -1,9 +1,0 @@
-{
-    "code": 1014,
-    "message": "The given data was invalid.",
-    "errors": {
-        "province": [
-            "The selected province field is invalid."
-        ]
-    }
-}

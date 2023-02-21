@@ -12,10 +12,10 @@ use Illuminate\Support\Facades\DB;
 
 class RolePermissionController extends AdminController
 {
-    public function __construct(
-        RoleRepository $roleRepository,
-        PermissionRepository $permissionRepository
-    ) {
+    protected $roleRepository;
+    protected $permissionRepository;
+
+    public function __construct(RoleRepository $roleRepository,PermissionRepository $permissionRepository) {
         $this->roleRepository = $roleRepository;
         $this->permissionRepository = $permissionRepository;
     }
@@ -51,11 +51,9 @@ class RolePermissionController extends AdminController
                     $this->permissionRepository->getAllGroups()
                 )
             );
-
             DB::commit();
         } catch (Exception $e) {
             DB::rollBack();
-
             return response()->json(
                 [
                     'error' => __('app.permissions.Changed permissions fail.'),
@@ -64,7 +62,6 @@ class RolePermissionController extends AdminController
                 Response::HTTP_INTERNAL_SERVER_ERROR
             );
         }
-
         return response()->json($this->roleRepository->getRolePermissionMap($role));
     }
 
@@ -76,7 +73,6 @@ class RolePermissionController extends AdminController
     public function redirect()
     {
         $firstRole = $this->roleRepository->whereNotSuperAdmin()->first();
-
         return empty($firstRole)
             ? redirect()->route('admin.roles.index')
             : redirect()->route('admin.roles.permissions.index', ['role' => $firstRole->id]);

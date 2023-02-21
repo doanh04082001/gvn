@@ -1,5 +1,4 @@
 <?php
-
 return [
 
     /**
@@ -228,20 +227,20 @@ return [
             'text' => 'dashboard',
             'route' => 'admin.dashboard',
             'icon' => 'fas fa-fw fa-tachometer-alt',
+            'can' => ['statistics','statistic'],
         ],
 
         ['header' => 'management'],
-        [
-            'text' => 'apply_leave',
-            'icon' => 'far fa-edit',
-            'can' => ['apply_leaves.create', 'apply_leaves.show'],
-            'submenu' => [
-                [
-                    'text' => 'add_apply_leave',
-                    'icon' => 'fas fa-fw fa-plus',
-                    'route' => 'admin.apply-leaves.create',
-                    'can' => 'apply_leaves.create',
-
+            [
+                'text' => 'apply_leave',
+                'icon' => 'far fa-edit',
+                'can' => ['apply_leaves.create', 'apply_leaves.show'],
+                'submenu' => [
+                    [
+                        'text' => 'add_apply_leave',
+                        'icon' => 'fas fa-fw fa-plus',
+                        'route' => 'admin.apply-leaves.create',
+                        'can' => 'apply_leaves.create',
                 ],
                 [
                     'text' => 'list_apply_leave',
@@ -300,12 +299,12 @@ return [
             'icon' => 'fas fa-fw fa-user',
             'can' => 'users.show',
             'submenu' => [
-                [
-                    'text' => 'create_user',
-                    'icon' => 'fas fa-fw fa-plus',
-                    'route' => 'admin.users.create',
-                    'can' => 'users.create',
-                ],
+                // [
+                //     'text' => 'create_user',
+                //     'icon' => 'fas fa-fw fa-plus',
+                //     'route' => 'admin.users.create',
+                //     'can' => 'users.create',
+                // ],
                 [
                     'text' => 'list_user',
                     'icon' => 'fas fa-fw fa-list',
@@ -477,21 +476,7 @@ return [
                 ],
             ],
         ],
-        'Firebase' => [
-            'active' => true,
-            'files' => [
-                [
-                    'type' => 'js',
-                    'asset' => true,
-                    'location' => '/vendor/firebase8.6.1/firebase-app.js',
-                ],
-                [
-                    'type' => 'js',
-                    'asset' => true,
-                    'location' => '/vendor/firebase8.6.1/firebase-messaging.js',
-                ],
-            ],
-        ],
+     
     ],
 
     /**

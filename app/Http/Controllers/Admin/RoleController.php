@@ -8,6 +8,7 @@ use App\Repositories\Contracts\RoleRepository;
 
 class RoleController extends AdminController
 {
+    protected $roleRepository;
     public function __construct(RoleRepository $roleRepository)
     {
         $this->roleRepository = $roleRepository;

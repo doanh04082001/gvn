@@ -24,14 +24,14 @@
                             <div class="col-6">
                                 <h5 class="mb-1 mt-1">{{ __('pages.users.title_list') }}</h5>
                             </div>
-                            @can('users.create')
+                            {{-- @can('users.create')
                                 <div class="col-6 text-right">
                                     <button class="btn btn-sm btn-outline-success"
                                         @click="redirectToUrl(`{{ route('admin.users.create') }}`)">
                                         <i class="fas fa-plus"></i>
                                         {{ __('pages.users.create_user') }}</button>
                                 </div>
-                            @endcan
+                            @endcan --}}
                         </div>
                     </div>
 
@@ -66,9 +66,7 @@
                     </div>
                 </div>
             </div>
-            <!-- /.col -->
         </div>
-        <!-- /.row -->
     </div>
 
 @stop

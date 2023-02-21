@@ -36,9 +36,6 @@ class Permission extends SpatiePermission
     const STATISTIC_GROUP = 'statistics';
     const CONFIRMATION_FROM_LEADER = 'confirm_from_leader';
     const CONFIRMATION_FROM_DIRECTOR = 'confirm_from_director';
-    // const SEE_ALL_APPLY_LEAVE = 'see_all_apply_leave';
-    // const SEE_ALL_OVERTIME = 'see_all_overtime';
-
     /**
      * Define permissip map group with each child permission
      *
@@ -70,7 +67,7 @@ class Permission extends SpatiePermission
             'overtimes.delete',
         ],
         self::STATISTIC_GROUP => [
-            'statistics.revenue',
+            'statistic',
         ],
         self::CONFIRMATION_FROM_LEADER => [
             'confirm_apply_leaves_from_leader',
@@ -84,11 +81,5 @@ class Permission extends SpatiePermission
             'confirm_overtime_from_director',
             'refuse_overtime_from_director',
         ],
-        // self::SEE_ALL_APPLY_LEAVE => [ 
-        //     ''
-        // ],
-        // self::SEE_ALL_OVERTIME => [
-
-        // ],
     ];
 }

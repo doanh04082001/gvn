@@ -1,9 +1,0 @@
-{
-    "code": 1007,
-    "message": "The given data was invalid.",
-    "errors": {
-        "products.0.toppings.0.id": [
-            "The selected products.0.toppings.0.id is invalid."
-        ]
-    }
-}

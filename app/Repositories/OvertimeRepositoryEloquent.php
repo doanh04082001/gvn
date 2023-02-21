@@ -32,30 +32,25 @@ class OvertimeRepositoryEloquent extends BaseRepository implements OvertimeRepos
 
     public function overTimes()
     {
-        $user = auth()->user();
-        if ($user->isLeader()) {
-            $teams = $user->teams;
-            foreach ($teams as $key => $team) {
+            $teams = auth()->user()->teams;
+            $arrIdUserOfTeams = [];
+            foreach ($teams as $team) {
                 $result = DB::table('team_user')
                     ->where('team_id', $team->id)
                     ->get();
                 $userOfTeam = collect($result);
-                $arrIdUserOfTeams = [];
-                foreach ($userOfTeam as $key => $user) {
+                foreach ($userOfTeam as $user) {
                     $arrIdUserOfTeams[] = $user->user_id;
                 }
                 $arrIdUserOfTeams = array_diff($arrIdUserOfTeams, [auth()->id()]);
-                $listApplyLeaveByIds = OverTime::whereIn('user_id', $arrIdUserOfTeams)
-                    ->get();
-                return $listApplyLeaveByIds;
             }
-        }
-        return OverTime::where('user_id', '!=', auth()->id())->orderBy('created_at', 'DESC')->get();
+            $listApplyLeaveByIds = OverTime::whereIn('user_id', $arrIdUserOfTeams)->where('status', '!=', Overtime::STATUS_CONFIRM_ADMIN)->latest()->get();
+            return $listApplyLeaveByIds;
     }
 
     public function getOvertimeStatus()
     {
-        return OverTime::where('status', '=', '1')->get();
+        return OverTime::latest()->get();
     }
 
     /**
@@ -70,5 +65,33 @@ class OvertimeRepositoryEloquent extends BaseRepository implements OvertimeRepos
         return $admin->isSuperAdmin()
             ? $this->get()
             : $admin->stores;
+    }
+
+    public function getStatistic($params) {
+        $user_id = $params['user_id'] ?? null;
+        $start_date = $params['start_date'] ?? null;
+        $end_date = $params['end_date'] ?? null;
+        $role_id = $params['role_id'] ?? null;
+        $status = 2;
+        return $this->when($user_id, function($q, $user_id) {
+            return $q->where('user_id', $user_id);
+        })
+        ->when($start_date, function($q, $start_date){
+            return $q->where('start_date', '>=', $start_date);
+        })
+        ->when($end_date, function($q, $end_date){
+            return $q->where('end_date', '<=', $end_date);
+        })
+        ->when($status, function($q, $status){
+            return $q->where('status', '=', $status)->where('status', Overtime::STATUS_CONFIRM_ADMIN);
+        })
+        ->when($role_id, function($q) use ($role_id) {
+            $q->whereHas('users', function($q) use ($role_id) {
+                $q->whereHas('roles', function($q) use ($role_id) {
+                    $q->where('id', $role_id);
+                });
+            });
+        })
+        ->get()->toArray();
     }
 }

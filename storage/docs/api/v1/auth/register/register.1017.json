@@ -1,9 +1,0 @@
-{
-    "code": 1017,
-    "message": "The given data was invalid.",
-    "errors": {
-        "phone": [
-            "The phone has already been taken."
-        ]
-    }
-}

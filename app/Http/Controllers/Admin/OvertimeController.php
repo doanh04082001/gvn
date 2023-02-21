@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\OvertimeRequest;
 use App\Models\Overtime;
 use App\Repositories\Contracts\OvertimeRepository;
+use App\Repositories\Contracts\RoleRepository;
 use Auth;
 
 class OvertimeController extends Controller
@@ -16,9 +17,12 @@ class OvertimeController extends Controller
      * @param OverTimeRepository $overTimeRepository
      */
     protected $overTimeRepository;
-    public function __construct(OvertimeRepository $overTimeRepository)
+    protected $roleRepository;
+
+    public function __construct(OvertimeRepository $overTimeRepository, RoleRepository $roleRepository)
     {
         $this->overTimeRepository = $overTimeRepository;
+        $this->roleRepository = $roleRepository;
     }
 
     public function index()
@@ -28,12 +32,15 @@ class OvertimeController extends Controller
             ? $this->overTimeRepository->getOvertimeStatus()
             : $this->overTimeRepository->overTimes();
         $myOvertimes = $this->overTimeRepository->myOverTime();
-        return view('admin.pages.overtime.index', compact('overTimes', 'myOvertimes'));
+        $roles = $this->roleRepository->all();
+
+        return view('admin.pages.overtime.index', compact('overTimes', 'myOvertimes','roles'));
     }
 
     public function create()
     {
-        return view('admin.pages.overtime.form');
+        $roles = $this->roleRepository->all();
+        return view('admin.pages.overtime.form',compact('roles'));
     }
 
     public function store(OvertimeRequest $request)
@@ -47,8 +54,8 @@ class OvertimeController extends Controller
             "work_content" => $request->work_content,
             "start_date" => $request->start_date,
             "end_date" => $request->end_date,
-            "position" =>  preg_replace('/[^0-9]/', '', $request->position),
-            "status" => 0,
+            "position" =>  Auth::user()->roles[0]->id,
+            "status" => Overtime::STATUS_SEND,
         ];
         $createOverTime = $this->overTimeRepository->create($dataCreate);
         session()->flash('success', "Successfully");
@@ -57,8 +64,9 @@ class OvertimeController extends Controller
 
     public function edit($id)
     {
+        $roles = $this->roleRepository->all();
         $store = Overtime::find($id);
-        return view('admin.pages.overtime.form', compact('store'));
+        return view('admin.pages.overtime.form', compact('store','roles'));
     }
 
     public function update(OvertimeRequest $request, $id)
@@ -68,7 +76,6 @@ class OvertimeController extends Controller
             "work_content" => $request->work_content,
             "start_date" => $request->start_date,
             "end_date" => $request->end_date,
-            "position" =>  preg_replace('/[^0-9]/', '', $request->position),
         ];
         $store = $this->overTimeRepository->update($dataUpdate, $id);
         session()->flash('success', 'Update Success');
@@ -89,11 +96,11 @@ class OvertimeController extends Controller
         $data =  Overtime::find($id);
         if ($superAdmin) {
             $data = [
-                "status" => 2,
+                "status" => Overtime::STATUS_CONFIRM_ADMIN,
             ];
         } elseif ($lead) {
             $data = [
-                "status" => 1,
+                "status" => Overtime::STATUS_CONFIRM_LEAD,
             ];
         }
         $this->overTimeRepository->update($data, $id);
@@ -105,7 +112,7 @@ class OvertimeController extends Controller
     {
         $data =  Overtime::find($id);
         $data = [
-            "status" => 3,
+            "status" => Overtime::STATUS_FAIL,
         ];
         $this->overTimeRepository->update($data, $id);
         session()->flash('success', ' Update Success');

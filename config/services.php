@@ -16,8 +16,8 @@ return [
     'gitlab' => [
         // 'client_id' => '86d32a5cf148ba4bad2fb0ac2a6bfc7cab54e0f4420869a24cc1866495fa48e3',
         // 'client_secret' => '47af7b6811129770fbed3ae167f0ebe18397bb322b88450598368e450dc87373',
-        'client_id' => 'e36d66569c5709643f8a4f1bd685060094617e12afc060419627fc4cdaa069b4',
-        'client_secret' => '8c2559eebeb5ae3ee8be5b81305c2acf8dda9f054c6d96863aeae11d888bf3e1',
+        'client_id' => '00f57ef5dbc1f2a1616f661c97c2015cc1acdcd005ad03d313843c8c194077cb',
+        'client_secret' => '0cd72dcc8d9e3b801121781f81ebb00e82776be09ca7ba1d6c3c4fa8e3a46a22',
         // 'redirect' => 'http://localhost:8000/gitlab/callback',
         'redirect' => 'http://shilin.test/admin/gitlab/callback',
         'host' => 'https://gitlab.gvn.com/'
@@ -38,5 +38,4 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
 ];

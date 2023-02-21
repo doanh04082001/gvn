@@ -43,6 +43,6 @@ return [
     'confirm_overtime_from_director' => 'Duyệt đơn tăng ca',
     'refuse_overtime_from_director' => 'Từ chối đơn tăng ca',
 
-    'statistics' => 'Báo cáo',
-    'statistics.revenue' => 'Báo cáo doanh thu',
+    'statistics' => 'Thống kê',
+    'statistic' => 'Thống kê nghỉ phép / tăng ca',
 ];

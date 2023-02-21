@@ -1,9 +1,0 @@
-{
-    "code": 1016,
-    "message": "The given data was invalid.",
-    "errors": {
-        "ward": [
-            "The selected ward field is invalid."
-        ]
-    }
-}

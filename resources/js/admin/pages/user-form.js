@@ -4,10 +4,6 @@ const app = new Vue({
         'v-select': VueSelect.VueSelect
     },
     data: {
-        stores: STORES,
-        userStores: STORES.filter(store => USER_STORES.includes(store.id)) ?? [],
-        allStatus: ALL_STATUS,
-        userStatus: USER_STATUS,
     },
     methods: {
         submitForm() {

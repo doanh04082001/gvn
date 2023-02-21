@@ -15,7 +15,10 @@ use Prettus\Repository\Traits\TransformableTrait;
 class ApplyLeave extends Model implements Transformable
 {
     use TransformableTrait;
+    const STATUS_SEND = 0;
+    const STATUS_CONFIRM_LEAD = 1;
     const STATUS_SUCCESS = 2;
+    const STATUS_FAIL = 3;
     /**
      * The attributes that are mass assignable.
      *

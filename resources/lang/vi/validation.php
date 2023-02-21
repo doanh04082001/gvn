@@ -22,6 +22,7 @@ return [
     'alpha_num' => 'Trường :attribute chỉ có thể chứa chữ cái và số.',
     'array' => 'Kiểu dữ liệu của trường :attribute phải là dạng mảng.',
     'before' => 'Trường :attribute phải là một ngày trước ngày :date.',
+    'today'=> 'Trường :attribute phải lớn hơn hoặc bằng hiện tại',
     'before_or_equal' => 'Trường :attribute phải là một ngày trước hoặc bằng ngày :date.',
     'between' => [
         'numeric' => 'Trường :attribute phải nằm trong khoảng :min - :max.',
@@ -208,10 +209,11 @@ return [
         'order' => 'thứ tự',
         'password_old' => 'mật khẩu cũ',
         'payment_method' => 'phương thức thanh toán',
-        'reason' => "Lí do",
+        'reason' => 'lí do',
         'start_date' => 'ngày bắt đầu',
         'end_date' => 'ngày kết thúc',
-        'work_content' => 'nội dung công việc'
+        'today' => 'ngày hiện tại',
+        'work_content' => 'nội dung công việc',
     ],
 
     /*

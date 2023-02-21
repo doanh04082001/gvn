@@ -33,7 +33,6 @@
 
     // Shipping service modal
     // const SHIPPING_SERVICE_MODAL_TITLE = `{{ __('pages.order_detail.select_shipping_service') }}`;
-    const AHAMOVE_SHIPPING_SERVICE = @json(App\Models\Setting::AHAMOVE_SHIPPING_METHOD);
     const GET_SHIPPING_SERVICE_URL = `{{ route('admin.setting.shipping.active-shippings') }}`;
 
 

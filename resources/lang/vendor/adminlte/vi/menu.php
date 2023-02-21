@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'dashboard' => 'Bảng điều khiển',
+    'dashboard' => 'Thông kê',
     'management' => 'QUẢN LÝ',
     'user_manager' => 'Quản lý nhân viên',
     'list_user' => 'Danh sách nhân viên',

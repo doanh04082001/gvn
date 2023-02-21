@@ -93,9 +93,7 @@
         const MARK_AS_READ_URL = "{{ route('admin.notifications.mark-as-read', ':id') }}";
         const MARK_AS_READ_ALL_URL = "{{ route('admin.notifications.mark-as-read-all') }}";
     </script>
-    <script type="module" src="{{ asset('assets/admin/firebase/utils/helper.js') }}"></script>
     @stack('js')
     @yield('js')
     <script type="module" src="{{ asset('assets/admin/js/pages/notifications.js') }}"></script>
-    <script type="module" src="{{ asset('assets/admin/firebase/utils/fcm-initial.js') }}"></script>
 @stop

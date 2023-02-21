@@ -2,7 +2,7 @@
 
 namespace App\Services\Payment;
 
-use App\Models\PaymentMethod;
+// use App\Models\PaymentMethod;
 use App\Services\Payment\Contracts\PaymentService as PaymentServiceContract;
 use App\Services\Payment\Gateways\Momo;
 use Illuminate\Support\ServiceProvider;
@@ -17,7 +17,7 @@ class PaymentServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(PaymentServiceContract::class, PaymentService::class);
-        $this->app->singleton(PaymentMethod::MOMO_METHOD, Momo::class);
+        // $this->app->singleton(PaymentMethod::MOMO_METHOD, Momo::class);
     }
 
     /**

@@ -89,12 +89,9 @@
                         </tbody>
                     </table>
                 </div>
-                <!-- /.card-body -->
             </div>
         </div>
-        <!-- /.col -->
     </div>
-    <!-- /.row -->
 </div>
 @stop
 

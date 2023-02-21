@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 use App\Repositories\Contracts\UserRepository;
 use App\Http\Controllers\Admin\AdminController;
+use App\Models\Role;
+use App\Models\Team;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Auth;
@@ -33,6 +35,8 @@ class LoginController extends AdminController
      *
      * @return void
      */
+    protected $userRepository;
+
     public function __construct(UserRepository $userRepository)
     {
         $this->middleware('guest:admin')->except('logout');
@@ -51,7 +55,7 @@ class LoginController extends AdminController
             if ($user != null) {
                 $data = User::where('email', '=', $user->email)->first();
                 if (is_null($data)) {
-                    User::create([
+                    $userNew = User::create([
                         'name' => $user->name,
                         'email' => $user->email,
                         'email_verified_at' => date('Y-m-d H:i:s'),
@@ -59,14 +63,22 @@ class LoginController extends AdminController
                         'social_id' => $user->id,
                         'social_type' => 'gitlab',
                     ]);
+                    if($userNew){
+                        $teamWeb = Team::where('name','Website')->first();
+                        $this->userRepository->syncToTeams($userNew, $teamWeb);
+
+                        $roleStaff = Role::where('name',Role::STAFF)->first();
+                        $userNew->roles()->attach($roleStaff);
+                    }
                 }
                 $data = User::where('email', '=', $user->email)->first();
                 if ($data) {
                     $success = Auth::login($data, false);
-                    return redirect()->route('apply_leaves.show');
+                    return redirect('admin/apply-leaves')->with($success);
                 }
             }
         } catch (\Exception $e) {
+            // dd($e);
             return redirect('/admin/login')->with('status', 'something_went_wrong');
         }
     }

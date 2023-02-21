@@ -22,8 +22,7 @@ interface ApplyLeaveRepository extends RepositoryInterface
 
     public function applyLeaveEdit($id);
 
-    public function buildOrderDatatableByStatus($userId);
-    
+    // get apply leaver (filter)    
     public function getStatistic($params);
 
 }

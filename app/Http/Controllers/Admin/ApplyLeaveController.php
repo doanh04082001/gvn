@@ -3,17 +3,15 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\Admin\ApplyLeaveRequest;
-use App\Jobs\SendEmail;
 use App\Models\ApplyLeave;
-use App\Models\User;
 use App\Repositories\Contracts\ApplyLeaveRepository;
 use App\Repositories\Contracts\RoleRepository;
 use Auth;
-
 class ApplyLeaveController extends AdminController
 {
     protected $applyLeaveRepository;
     protected $roleRepository;
+    
     public function __construct(ApplyLeaveRepository $applyLeaveRepository, RoleRepository $roleRepository)
     {
         $this->applyLeaveRepository = $applyLeaveRepository;
@@ -26,7 +24,8 @@ class ApplyLeaveController extends AdminController
             ? $this->applyLeaveRepository->getApplyLeaveStatus()
             : ($user->isLeader() ?  $this->applyLeaveRepository->applyLeaves() : "");
         $my_leaves = $this->applyLeaveRepository->myApplyLeaves();
-        return view('admin.pages.apply-leave.index', compact('apply_leaves', 'my_leaves'));
+        $roles = $this->roleRepository->all();
+        return view('admin.pages.apply-leave.index', compact('apply_leaves', 'my_leaves','roles'));
     }
 
     /**
@@ -52,9 +51,10 @@ class ApplyLeaveController extends AdminController
             "start_date" => $request->start_date,
             "end_date" => $request->end_date,
             "position" =>  Auth::user()->roles[0]->id,
-            "status" => 0,
+            "status" => ApplyLeave::STATUS_SEND,
         ];
         $createApplyLeave = $this->applyLeaveRepository->create($dataCreate);
+        session()->flash('success', "Successfully");
         return response()->json(['store' => $createApplyLeave]);
     }
 
@@ -107,13 +107,9 @@ class ApplyLeaveController extends AdminController
         $lead = auth()->user()->isLeader();
         $data =  ApplyLeave::find($id);
         if ($superAdmin) {
-            $data = [
-                "status" => 2,
-            ];
+            $data = ["status" => ApplyLeave::STATUS_SUCCESS,];
         } elseif ($lead) {
-            $data = [
-                "status" => 1,
-            ];
+            $data = ["status" => ApplyLeave::STATUS_CONFIRM_LEAD,];
         }
         $this->applyLeaveRepository->update($data, $id);
         session()->flash('success', ' Update Success');
@@ -124,7 +120,7 @@ class ApplyLeaveController extends AdminController
     {
         $data =  ApplyLeave::find($id);
         $data = [
-            "status" => 3,
+            "status" => ApplyLeave::STATUS_FAIL,
         ];
         $this->applyLeaveRepository->update($data, $id);
         session()->flash('success', ' Update Success');

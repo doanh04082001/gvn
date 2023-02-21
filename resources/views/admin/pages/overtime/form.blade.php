@@ -1,6 +1,9 @@
 @extends('adminlte::page')
 
-@php $isEdit = isset($store) @endphp
+@php 
+    $isEdit = isset($store);
+    use App\Models\Role;
+@endphp
 
 @if ($isEdit)
     @section('title', __('pages.overtime.update'))
@@ -67,14 +70,20 @@
                                 <span class="text-danger">*</span>
                             </label>
                             <div class="col-sm-8">
-                                <input type="text" name="possition" class="form-control" id="possition" value="{{Auth::user()->roles[0]->name}}" disabled>
-                                @error('position')
-                                    <span class="text-danger" role="alert">
-                                        <small>{{ $message }}</small>
-                                    </span>
-                                @enderror
+                                <select name="position" id="position" required class="form-control @error('position') is-invalid @enderror" disabled> 
+                                    <option value="">{{ __('pages.users.select_position') }}</option>
+                                    @foreach ($roles as $role)
+                                        @if ($role->name !== Role::SUPER_ADMIN_NAME)
+                                            <option value="{{ $role->id }}"
+                                                {{ Auth::user()->roles->first()->id === $role->id ? 'selected' : ''}}>
+                                                {{ $role->name }}
+                                            </option>
+                                        @endif
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
+
                         <div class="form-group row">
                             <label for="work_content" class="col-sm-2 col-form-label">
                                 {{ __('pages.overtime.work_content') }}
@@ -88,23 +97,17 @@
 
                         <div class="form-group row">
                             <label for="date" class="col-sm-2 col-form-label">
-                                {{ __('pages.overtime.start_date') }} - {{ __('pages.overtime.end_date') }}
+                                {{ __('pages.apply_leave.start_date') }} - {{ __('pages.apply_leave.end_date') }}
                                 <span class="text-danger">*</span>
                             </label>
-                            <div class="col-sm-8 d-flex justify-content-between">
-                                <div class='col-xs-4'>
-                                    <div class="form-group">
-                                        <input type="datetime-local" class="form-control" id="start_date" name="start_date"
-                                            v-model="store.start_date">
-                                        <span class="text-red small">@{{ errors.start_date }}</span>
-                                    </div>
+                            <div class="col-sm-8 row form-group d-flex justify-content-between repo">
+                                <div class='col-md-6 mr-auto'>
+                                    <input type="datetime-local" class="form-control" id="start_date" name="start_date" v-model="store.start_date">
+                                    <span class="text-red small">@{{ errors.start_date }}</span>
                                 </div>
-                                <div class='col-xs-4'>
-                                    <div class="form-group">
-                                        <input type="datetime-local" class="form-control" id="end_date" name="end_date"
-                                            v-model="store.end_date">
-                                        <span class="text-red small">@{{ errors.end_date }}</span>
-                                    </div>
+                                <div class='col-md-6 ml-auto'>
+                                    <input type="datetime-local" class="form-control input-gap" id="end_date" name="end_date" v-model="store.end_date">
+                                    <span class="text-red small">@{{ errors.end_date }}</span>
                                 </div>
                             </div>
                         </div>
@@ -115,6 +118,55 @@
     </div>
 @stop
 
+@section('css')
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <style>
+    .select2-container--disabled{
+        width: 100% !important;
+    }
+    .mr-auto{
+        padding-right: 0px !important 
+    }
+    .ml-auto{
+        padding-right: 0px !important
+    }
+    .repo{
+        padding-right: 0px !important
+    }
+    @media (max-width: 768px) {
+        .input-gap {
+            margin-top: 10px;
+        }
+    }
+    .select2-container--default .select2-selection--single,
+        .select2-selection .select2-selection--single {
+            padding: 3px 0px;
+            height: 30px;
+        }
+        .select2-container {
+            margin-top: -5px;
+        }
+        option {
+            white-space: nowrap;
+        }
+        .select2-container--default .select2-selection--single {
+            background-color: #fff;
+            border: 1px solid #aaa;
+            border-radius: 0px;
+        }
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            color: #216992;
+        }
+        .select2-container--default .select2-selection--multiple {
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .select2-container--default .select2-results__group {
+            background-color: #eeeeee;
+        }
+    </style>
+@stop
+
 @section('js')
     <script>
         const currentStore = {!! $store ?? 'null' !!};
@@ -123,4 +175,5 @@
         const updateOverTime = "{{ route('admin.overtime.update', $store->id ?? ':id') }}";
     </script>
     <script type="module" src="{{ asset('/assets/admin/js/pages/overtime-form.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 @stop

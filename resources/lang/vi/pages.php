@@ -1,13 +1,13 @@
 <?php
 
-use App\Models\Customer;
-// use App\Models\Order;
-use App\Models\PaymentTransaction;
-use App\Models\Product;
-use App\Models\Promotion;
-use App\Models\TaxonomyItem;
-use App\Models\Topping;
-use App\Models\Voucher;
+// use App\Models\Customer;
+// // use App\Models\Order;
+// use App\Models\PaymentTransaction;
+// use App\Models\Product;
+// use App\Models\Promotion;
+// use App\Models\TaxonomyItem;
+// use App\Models\Topping;
+// use App\Models\Voucher;
 
 return [
     /*
@@ -89,10 +89,10 @@ return [
         'point' => 'Số điểm',
         'order_count' => 'Số đơn hàng',
         'status' => 'Trạng thái',
-        'status_option' => [
-            Customer::STATUS_ACTIVE => 'Bật',
-            Customer::STATUS_INACTIVE => 'Tắt',
-        ],
+        // 'status_option' => [
+        //     Customer::STATUS_ACTIVE => 'Bật',
+        //     Customer::STATUS_INACTIVE => 'Tắt',
+        // ],
     ],
 
     'apply_leave' => [
@@ -150,5 +150,6 @@ return [
         'total'=>'Tổng số giờ nghỉ',
         'total_hour'=>'Tổng số giờ tăng ca',
         'all_roles' => 'Tất cả chức vụ',
-    ]
+    ],
+    'statistic' => 'Thống kê'
 ];

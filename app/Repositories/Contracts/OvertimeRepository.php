@@ -18,4 +18,7 @@ interface OvertimeRepository extends RepositoryInterface
     public function overTimes();
 
     public function getOvertimeStatus();
+
+    // statistic overtime
+    public function getStatistic($params);
 }

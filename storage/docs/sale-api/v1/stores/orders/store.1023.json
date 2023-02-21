@@ -1,9 +1,0 @@
-{
-    "code": 1023,
-    "message": "The given data was invalid.",
-    "errors": {
-        "products.0.variant_id": [
-            "The products.0.variant_id field is required."
-        ]
-    }
-}

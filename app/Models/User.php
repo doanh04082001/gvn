@@ -75,7 +75,7 @@ class User extends BaseAuthentication implements JWTSubject
      */
     public function stores()
     {
-        return $this->belongsToMany(Store::class);
+        // return $this->belongsToMany(Store::class);
     }
 
     public function applyLeaves()
@@ -104,7 +104,7 @@ class User extends BaseAuthentication implements JWTSubject
      */
     public function storesWithInactive()
     {
-        return $this->belongsToMany(Store::class);
+        // return $this->belongsToMany(Store::class);
     }
 
     /**

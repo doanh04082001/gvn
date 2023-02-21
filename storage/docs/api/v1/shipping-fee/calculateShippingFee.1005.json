@@ -1,9 +1,0 @@
-{
-    "code": 1005,
-    "message": "The given data was invalid.",
-    "errors": {
-        "store_id": [
-            "The selected store id is invalid."
-        ]
-    }
-}

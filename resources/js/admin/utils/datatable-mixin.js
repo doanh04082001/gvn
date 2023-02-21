@@ -13,7 +13,6 @@ const dataTableMixin = {
     },
     mounted() {
         this.initDataTable()
-        console.log(this.$datatable);
         this.handleButtonDataTableEvent()
         this.handleDataTableEvent()
     },

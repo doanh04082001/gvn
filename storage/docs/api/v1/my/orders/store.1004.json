@@ -1,9 +1,0 @@
-{
-    "code": 1004,
-    "message": "The given data was invalid.",
-    "errors": {
-        "payment_method": [
-            "The selected payment method is invalid."
-        ]
-    }
-}

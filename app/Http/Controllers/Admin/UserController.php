@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\Admin\UserRequest;
 use App\Models\User;
 use App\Repositories\Contracts\RoleRepository;
-use App\Repositories\Contracts\StoreRepository;
+// use App\Repositories\Contracts\StoreRepository;
 use App\Repositories\Contracts\UserRepository;
 use Illuminate\Http\Request;
 
@@ -13,16 +13,15 @@ class UserController extends AdminController
 {
     protected $userRepository;
     protected $roleRepository;
-    protected $storeRepository;
+    // protected $storeRepository;
 
     public function __construct(
         UserRepository $userRepository,
-        RoleRepository $roleRepository,
-        StoreRepository $storeRepository
+        RoleRepository $roleRepository
     ) {
         $this->userRepository = $userRepository;
         $this->roleRepository = $roleRepository;
-        $this->storeRepository = $storeRepository;
+        // $this->storeRepository = $storeRepository;
     }
 
     /**
@@ -72,7 +71,7 @@ class UserController extends AdminController
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(UserRequest $request)
-    {
+    {    
         $validated = $request->validated();
         $user = $this->userRepository->store($validated);
         $this->userRepository->syncToRoles($user, [$validated['user_role']]);
@@ -109,8 +108,7 @@ class UserController extends AdminController
             $validated['password'] = bcrypt($validated['password']);
         $user->update($validated);
         $this->userRepository->syncToRoles($user, [$validated['user_role']]);
-        $this->userRepository->syncToTeams($user, [$validated['team']]);
-
+        $this->userRepository->syncToTeams($user, $validated['team']);
         return redirect()->route('admin.users.index')->withSuccess(__('app.messages.success.modify'));
     }
 
@@ -123,7 +121,6 @@ class UserController extends AdminController
     public function destroy(User $user)
     {
         $user->delete();
-
         return response()->json(['message' => 'success']);
     }
 }

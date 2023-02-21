@@ -18,11 +18,12 @@ Auth::routes([
 ]);
 Route::get('gitlab/redirect', [App\Http\Controllers\Admin\Auth\LoginController::class, 'provider'])->name('login.provider');
 Route::get('gitlab/callback', [App\Http\Controllers\Admin\Auth\LoginController::class, 'handleCallback'])->name('login.callback');
-
 Route::middleware('auth:admin')->group(function () {
-    Route::get('/', 'DashboardController@index')->name('base');
-    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('/', 'DashboardController@index')->name('base')->middleware('permission:statistics');
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard')->middleware('permission:statistics');
     Route::get('/dashboard/apply_leave-datatable', 'DashboardController@getApplyLeaveDatatable')->name('get.apply_leave.datatable');
+    Route::get('/dashboard/overtime-datatable', 'DashboardController@getOvertimeDatatable')->name('get.overtime.datatable');
+
     Route::get('/dashboard/processing-datatable', 'DashboardController@getProcessingOrderDatatable')->name('get.processing.order.datatable');
     Route::get('/dashboard/bestseller/chart', 'DashboardController@getBarChartData')->name('get.barchart.data');
     Route::get('/dashboard/statistical', 'DashboardController@getStatistical')->name('get.statistical.data');
@@ -244,12 +245,12 @@ Route::middleware('auth:admin')->group(function () {
 
     // User
     Route::resource('/users', 'UserController')
-        ->only(['index', 'datatable', 'create', 'store', 'edit', 'update', 'destroy'])
+        ->only(['index', 'datatable', 'edit', 'update', 'destroy'])
         ->middleware([
             'index' => 'permission:users.show',
             'datatable' => 'permission:users.show',
-            'create' => 'permission:users.create',
-            'store' => 'permission:users.create',
+            // 'create' => 'permission:users.create',
+            // 'store' => 'permission:users.create',
             'edit' => 'permission:users.edit',
             'update' => 'permission:users.edit',
             'destroy' => 'permission:users.delete',

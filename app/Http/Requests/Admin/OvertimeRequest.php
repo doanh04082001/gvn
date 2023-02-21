@@ -13,9 +13,7 @@ class OvertimeRequest extends FormRequest
      */
     public function authorize()
     {
-        return $this->getMethod() == 'PUT'
-            ? auth()->user()->canAccessStore($this->store)
-            : true;
+        return true;
     }
 
     /**
@@ -28,8 +26,8 @@ class OvertimeRequest extends FormRequest
         return [
             'phone' => 'bail|required|string|regex:' . STORE_PHONE_REGEX,
             'work_content' => 'required',
-            'start_date' => 'bail|required|after:today',
-            'end_date' => 'bail|required|after:today'
+            'start_date' => 'bail|required|after_or_equal:today|before_or_equal:end_date',
+            'end_date' => 'bail|required|after_or_equal:start_date'
         ];
     }
 }
